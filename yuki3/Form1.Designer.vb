@@ -28,6 +28,8 @@ Partial Class Form1
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.CehckforbadPross = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer5 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'Timer1
@@ -44,14 +46,23 @@ Partial Class Form1
         '
         'CehckforbadPross
         '
-        Me.CehckforbadPross.Interval = 40
+        Me.CehckforbadPross.Enabled = True
+        Me.CehckforbadPross.Interval = 3000
+        '
+        'Timer4
+        '
+        '
+        'Timer5
+        '
+        Me.Timer5.Interval = 10000
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(755, 256)
+        Me.ClientSize = New System.Drawing.Size(566, 208)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form1"
         Me.ShowInTaskbar = False
         Me.Text = "Yuki"
@@ -64,4 +75,6 @@ Partial Class Form1
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Timer3 As Timer
     Friend WithEvents CehckforbadPross As Timer
+    Friend WithEvents Timer4 As Timer
+    Friend WithEvents Timer5 As Timer
 End Class

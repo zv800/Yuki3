@@ -36,3 +36,23 @@ C:\Users\denve\Downloads\Yuki3-main\Yuki3-main\yuki3\obj\Debug\yuki3.vbproj.Core
 C:\Users\denve\Downloads\Yuki3-main\Yuki3-main\yuki3\obj\Debug\yuki3.exe
 C:\Users\denve\Downloads\Yuki3-main\Yuki3-main\yuki3\obj\Debug\yuki3.xml
 C:\Users\denve\Downloads\Yuki3-main\Yuki3-main\yuki3\obj\Debug\yuki3.pdb
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\bin\Debug\yuki3.exe.config
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\bin\Debug\yuki3.exe
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\bin\Debug\yuki3.pdb
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\bin\Debug\yuki3.xml
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.vbproj.AssemblyReference.cache
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.vbproj.SuggestedBindingRedirects.cache
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.creepy_Patrick_Star.resources
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.Form1.resources
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.Form2.resources
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.hahahahaerror.resources
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.Resources.resources
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.NewYears.resources
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.rickrolled.resources
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.ur_pc_is_gone_lmao.resources
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.Yuki_credits.resources
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.vbproj.GenerateResource.cache
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.vbproj.CoreCompileInputs.cache
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.exe
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.xml
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\yuki3\obj\Debug\yuki3.pdb

