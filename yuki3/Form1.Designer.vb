@@ -32,12 +32,15 @@ Partial Class Form1
         '
         'Timer1
         '
+        Me.Timer1.Interval = 20000
         '
         'Timer2
         '
+        Me.Timer2.Interval = 10000
         '
         'Timer3
         '
+        Me.Timer3.Interval = 10000
         '
         'CehckforbadPross
         '

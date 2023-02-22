@@ -62,7 +62,9 @@ Partial Class hahahahaerror
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(391, 189)
+        Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(391, 189)
         Me.Name = "hahahahaerror"
         Me.Text = "Yuki - ???"

@@ -70,7 +70,9 @@ Partial Class NewYears
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(853, 360)
+        Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(853, 360)
         Me.Name = "NewYears"
         Me.Text = "Yuki- NewYears"

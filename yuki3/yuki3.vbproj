@@ -48,7 +48,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Color_circle_%28RGB%29.svg.ico</ApplicationIcon>
+    <ApplicationIcon>color_wheel_16443.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -149,6 +149,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="hahahahaerror.resx">
       <DependentUpon>hahahahaerror.vb</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +188,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Color_circle_%28RGB%29.svg.ico" />
+    <Content Include="color_wheel_16443.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

