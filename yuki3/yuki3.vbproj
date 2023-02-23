@@ -192,9 +192,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\..\..\Melter.exe">
-      <Link>Melter.exe</Link>
-    </EmbeddedResource>
     <Content Include="Color_circle_%28RGB%29.svg.ico" />
     <Content Include="color_wheel_16443.ico" />
   </ItemGroup>

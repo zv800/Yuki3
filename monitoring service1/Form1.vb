@@ -11,7 +11,7 @@
 
 
         Else
-            MsgBox("AAAAAAAA")
+
             Try
                 Dim fileReader As String
                 fileReader = My.Computer.FileSystem.ReadAllText("C:\Users\" & SystemInformation.UserName & "\path.yuki")
