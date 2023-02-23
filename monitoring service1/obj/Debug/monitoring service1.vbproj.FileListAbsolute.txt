@@ -1,0 +1,13 @@
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\monitoring service1\bin\Debug\monitoring service1.exe.config
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\monitoring service1\bin\Debug\monitoring service1.exe
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\monitoring service1\bin\Debug\monitoring service1.pdb
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\monitoring service1\bin\Debug\monitoring service1.xml
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\monitoring service1\obj\Debug\monitoring service1.vbproj.AssemblyReference.cache
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\monitoring service1\obj\Debug\monitoring service1.vbproj.SuggestedBindingRedirects.cache
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\monitoring service1\obj\Debug\monitoring_service1.Form1.resources
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\monitoring service1\obj\Debug\monitoring_service1.Resources.resources
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\monitoring service1\obj\Debug\monitoring service1.vbproj.GenerateResource.cache
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\monitoring service1\obj\Debug\monitoring service1.vbproj.CoreCompileInputs.cache
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\monitoring service1\obj\Debug\monitoring service1.exe
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\monitoring service1\obj\Debug\monitoring service1.xml
+C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\monitoring service1\obj\Debug\monitoring service1.pdb

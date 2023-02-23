@@ -30,6 +30,11 @@ Partial Class Form1
         Me.CehckforbadPross = New System.Windows.Forms.Timer(Me.components)
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer5 = New System.Windows.Forms.Timer(Me.components)
+        Me.CheckForBadFiles = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer6 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer7 = New System.Windows.Forms.Timer(Me.components)
+        Me.errorrow = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer8 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'Timer1
@@ -56,13 +61,30 @@ Partial Class Form1
         '
         Me.Timer5.Interval = 10000
         '
+        'CheckForBadFiles
+        '
+        Me.CheckForBadFiles.Enabled = True
+        Me.CheckForBadFiles.Interval = 9000
+        '
+        'Timer6
+        '
+        Me.Timer6.Interval = 5000
+        '
+        'Timer7
+        '
+        Me.Timer7.Enabled = True
+        Me.Timer7.Interval = 70
+        '
+        'errorrow
+        '
+        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(566, 208)
+        Me.ClientSize = New System.Drawing.Size(759, 256)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form1"
         Me.ShowInTaskbar = False
         Me.Text = "Yuki"
@@ -77,4 +99,9 @@ Partial Class Form1
     Friend WithEvents CehckforbadPross As Timer
     Friend WithEvents Timer4 As Timer
     Friend WithEvents Timer5 As Timer
+    Friend WithEvents CheckForBadFiles As Timer
+    Friend WithEvents Timer6 As Timer
+    Friend WithEvents Timer7 As Timer
+    Friend WithEvents errorrow As Timer
+    Friend WithEvents Timer8 As Timer
 End Class

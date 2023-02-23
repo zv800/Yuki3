@@ -5,6 +5,12 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "yuki3", "yuki3\yuki3.vbproj", "{7B76F5C4-6876-4E9C-99D5-D9239DCDC3EF}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "monitoring service1", "monitoring service1\monitoring service1.vbproj", "{6932913B-8640-448C-8631-671938416F54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1E2B83E6-5A9B-40FC-BC43-8898C5C705EA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Yuki3.Administrator", "Yuki3.Administrator\Yuki3.Administrator.vbproj", "{8A819607-05DA-462E-BFB9-935D3F92FC97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,14 @@ Global
 		{7B76F5C4-6876-4E9C-99D5-D9239DCDC3EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B76F5C4-6876-4E9C-99D5-D9239DCDC3EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B76F5C4-6876-4E9C-99D5-D9239DCDC3EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6932913B-8640-448C-8631-671938416F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6932913B-8640-448C-8631-671938416F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6932913B-8640-448C-8631-671938416F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6932913B-8640-448C-8631-671938416F54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A819607-05DA-462E-BFB9-935D3F92FC97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A819607-05DA-462E-BFB9-935D3F92FC97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A819607-05DA-462E-BFB9-935D3F92FC97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A819607-05DA-462E-BFB9-935D3F92FC97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
