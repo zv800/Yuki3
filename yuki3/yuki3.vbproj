@@ -139,6 +139,18 @@
     <Compile Include="ur pc is gone lmao.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Yuki - infected.Designer.vb">
+      <DependentUpon>Yuki - infected.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Yuki - infected.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yuki - reverting changes.Designer.vb">
+      <DependentUpon>Yuki - reverting changes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Yuki - reverting changes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Yuki credits.Designer.vb">
       <DependentUpon>Yuki credits.vb</DependentUpon>
     </Compile>
@@ -174,6 +186,12 @@
     <EmbeddedResource Include="ur pc is gone lmao.resx">
       <DependentUpon>ur pc is gone lmao.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Yuki - infected.resx">
+      <DependentUpon>Yuki - infected.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yuki - reverting changes.resx">
+      <DependentUpon>Yuki - reverting changes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Yuki credits.resx">
       <DependentUpon>Yuki credits.vb</DependentUpon>
     </EmbeddedResource>
@@ -192,9 +210,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\..\..\Melter.exe">
-      <Link>Melter.exe</Link>
-    </EmbeddedResource>
     <Content Include="Color_circle_%28RGB%29.svg.ico" />
     <Content Include="color_wheel_16443.ico" />
   </ItemGroup>
