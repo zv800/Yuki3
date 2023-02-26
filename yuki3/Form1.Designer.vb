@@ -39,6 +39,10 @@ Partial Class Form1
         Me.DelVirusRemover = New System.Windows.Forms.Timer(Me.components)
         Me.KillFalseP = New System.Windows.Forms.Timer(Me.components)
         Me.Wait2DisPros = New System.ComponentModel.BackgroundWorker()
+        Me.Memzopenweb = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer10 = New System.Windows.Forms.Timer(Me.components)
+        Me.Stilluseingthispclol = New System.Windows.Forms.Timer(Me.components)
+        Me.fakememz = New System.ComponentModel.BackgroundWorker()
         Me.SuspendLayout()
         '
         'Timer1
@@ -95,13 +99,23 @@ Partial Class Form1
         'Wait2DisPros
         '
         '
+        'Memzopenweb
+        '
+        '
+        'Stilluseingthispclol
+        '
+        Me.Stilluseingthispclol.Interval = 10000
+        '
+        'fakememz
+        '
+        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(759, 256)
+        Me.ClientSize = New System.Drawing.Size(569, 208)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Form1"
         Me.ShowInTaskbar = False
         Me.Text = "Yuki"
@@ -125,4 +139,8 @@ Partial Class Form1
     Friend WithEvents DelVirusRemover As Timer
     Friend WithEvents KillFalseP As Timer
     Friend WithEvents Wait2DisPros As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Memzopenweb As Timer
+    Friend WithEvents Timer10 As Timer
+    Friend WithEvents Stilluseingthispclol As Timer
+    Friend WithEvents fakememz As System.ComponentModel.BackgroundWorker
 End Class
