@@ -11,3 +11,16 @@ C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\Yuki3.Administrator\obj\Debug
 C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\Yuki3.Administrator\obj\Debug\Yuki3.Administrator.exe
 C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\Yuki3.Administrator\obj\Debug\Yuki3.Administrator.xml
 C:\Users\denve\Downloads\Yuki3-main (1)\Yuki3-main\Yuki3.Administrator\obj\Debug\Yuki3.Administrator.pdb
+C:\Users\denve\Downloads\Yuki3-main (2)\Yuki3-main\Yuki3.Administrator\bin\Debug\Yuki3.Administrator.exe.config
+C:\Users\denve\Downloads\Yuki3-main (2)\Yuki3-main\Yuki3.Administrator\bin\Debug\Yuki3.Administrator.exe
+C:\Users\denve\Downloads\Yuki3-main (2)\Yuki3-main\Yuki3.Administrator\bin\Debug\Yuki3.Administrator.pdb
+C:\Users\denve\Downloads\Yuki3-main (2)\Yuki3-main\Yuki3.Administrator\bin\Debug\Yuki3.Administrator.xml
+C:\Users\denve\Downloads\Yuki3-main (2)\Yuki3-main\Yuki3.Administrator\obj\Debug\Yuki3.Administrator.vbproj.AssemblyReference.cache
+C:\Users\denve\Downloads\Yuki3-main (2)\Yuki3-main\Yuki3.Administrator\obj\Debug\Yuki3.Administrator.vbproj.SuggestedBindingRedirects.cache
+C:\Users\denve\Downloads\Yuki3-main (2)\Yuki3-main\Yuki3.Administrator\obj\Debug\Yuki3.Administrator.Form1.resources
+C:\Users\denve\Downloads\Yuki3-main (2)\Yuki3-main\Yuki3.Administrator\obj\Debug\Yuki3.Administrator.Resources.resources
+C:\Users\denve\Downloads\Yuki3-main (2)\Yuki3-main\Yuki3.Administrator\obj\Debug\Yuki3.Administrator.vbproj.GenerateResource.cache
+C:\Users\denve\Downloads\Yuki3-main (2)\Yuki3-main\Yuki3.Administrator\obj\Debug\Yuki3.Administrator.vbproj.CoreCompileInputs.cache
+C:\Users\denve\Downloads\Yuki3-main (2)\Yuki3-main\Yuki3.Administrator\obj\Debug\Yuki3.Administrator.exe
+C:\Users\denve\Downloads\Yuki3-main (2)\Yuki3-main\Yuki3.Administrator\obj\Debug\Yuki3.Administrator.xml
+C:\Users\denve\Downloads\Yuki3-main (2)\Yuki3-main\Yuki3.Administrator\obj\Debug\Yuki3.Administrator.pdb

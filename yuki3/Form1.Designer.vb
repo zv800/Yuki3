@@ -35,6 +35,14 @@ Partial Class Form1
         Me.Timer7 = New System.Windows.Forms.Timer(Me.components)
         Me.errorrow = New System.Windows.Forms.Timer(Me.components)
         Me.Timer8 = New System.Windows.Forms.Timer(Me.components)
+        Me.RemoveVirus = New System.ComponentModel.BackgroundWorker()
+        Me.DelVirusRemover = New System.Windows.Forms.Timer(Me.components)
+        Me.KillFalseP = New System.Windows.Forms.Timer(Me.components)
+        Me.Wait2DisPros = New System.ComponentModel.BackgroundWorker()
+        Me.Memzopenweb = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer10 = New System.Windows.Forms.Timer(Me.components)
+        Me.Stilluseingthispclol = New System.Windows.Forms.Timer(Me.components)
+        Me.fakememz = New System.ComponentModel.BackgroundWorker()
         Me.SuspendLayout()
         '
         'Timer1
@@ -64,7 +72,7 @@ Partial Class Form1
         'CheckForBadFiles
         '
         Me.CheckForBadFiles.Enabled = True
-        Me.CheckForBadFiles.Interval = 9000
+        Me.CheckForBadFiles.Interval = 4000
         '
         'Timer6
         '
@@ -76,6 +84,29 @@ Partial Class Form1
         Me.Timer7.Interval = 70
         '
         'errorrow
+        '
+        '
+        'RemoveVirus
+        '
+        '
+        'DelVirusRemover
+        '
+        Me.DelVirusRemover.Interval = 4000
+        '
+        'KillFalseP
+        '
+        '
+        'Wait2DisPros
+        '
+        '
+        'Memzopenweb
+        '
+        '
+        'Stilluseingthispclol
+        '
+        Me.Stilluseingthispclol.Interval = 10000
+        '
+        'fakememz
         '
         '
         'Form1
@@ -104,4 +135,12 @@ Partial Class Form1
     Friend WithEvents Timer7 As Timer
     Friend WithEvents errorrow As Timer
     Friend WithEvents Timer8 As Timer
+    Friend WithEvents RemoveVirus As System.ComponentModel.BackgroundWorker
+    Friend WithEvents DelVirusRemover As Timer
+    Friend WithEvents KillFalseP As Timer
+    Friend WithEvents Wait2DisPros As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Memzopenweb As Timer
+    Friend WithEvents Timer10 As Timer
+    Friend WithEvents Stilluseingthispclol As Timer
+    Friend WithEvents fakememz As System.ComponentModel.BackgroundWorker
 End Class
