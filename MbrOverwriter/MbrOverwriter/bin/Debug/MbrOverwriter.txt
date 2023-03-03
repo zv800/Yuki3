@@ -1,0 +1,1 @@
+I removed the executable so you wouldn't accidentally run it you can build it yourself

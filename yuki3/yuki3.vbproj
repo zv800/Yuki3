@@ -86,6 +86,12 @@
     <Compile Include="creepy Patrick Star.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="earrape.Designer.vb">
+      <DependentUpon>earrape.vb</DependentUpon>
+    </Compile>
+    <Compile Include="earrape.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     <EmbeddedResource Include="creepy Patrick Star.resx">
       <DependentUpon>creepy Patrick Star.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="earrape.resx">
+      <DependentUpon>earrape.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +206,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="main.db" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -212,6 +222,10 @@
   <ItemGroup>
     <Content Include="Color_circle_%28RGB%29.svg.ico" />
     <Content Include="color_wheel_16443.ico" />
+    <Content Include="Yuki3Antivirus.exe" />
+    <EmbeddedResource Include="Yuki3 Antivirus.exe" />
+    <EmbeddedResource Include="wallpaper.bmp" />
+    <EmbeddedResource Include="urpcfucked.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

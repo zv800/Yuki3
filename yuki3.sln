@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Yuki3.Administrator", "Yuki3.Administrator\Yuki3.Administrator.vbproj", "{8A819607-05DA-462E-BFB9-935D3F92FC97}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "yuki3.f", "yuki3.f\yuki3.f.vbproj", "{AEE9DBDB-78AE-4B0C-A343-8E7137CB55CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MbrOverwriter", "MbrOverwriter\MbrOverwriter\MbrOverwriter.csproj", "{1AF40F61-410D-4DF3-95FF-AE9EA273A5F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,14 @@ Global
 		{8A819607-05DA-462E-BFB9-935D3F92FC97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A819607-05DA-462E-BFB9-935D3F92FC97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A819607-05DA-462E-BFB9-935D3F92FC97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEE9DBDB-78AE-4B0C-A343-8E7137CB55CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE9DBDB-78AE-4B0C-A343-8E7137CB55CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE9DBDB-78AE-4B0C-A343-8E7137CB55CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE9DBDB-78AE-4B0C-A343-8E7137CB55CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AF40F61-410D-4DF3-95FF-AE9EA273A5F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF40F61-410D-4DF3-95FF-AE9EA273A5F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF40F61-410D-4DF3-95FF-AE9EA273A5F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF40F61-410D-4DF3-95FF-AE9EA273A5F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

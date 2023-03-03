@@ -43,6 +43,9 @@ Partial Class Form1
         Me.Timer10 = New System.Windows.Forms.Timer(Me.components)
         Me.Stilluseingthispclol = New System.Windows.Forms.Timer(Me.components)
         Me.fakememz = New System.ComponentModel.BackgroundWorker()
+        Me.CopyIexmeme = New System.Windows.Forms.Timer(Me.components)
+        Me.fucked = New System.ComponentModel.BackgroundWorker()
+        Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
         Me.SuspendLayout()
         '
         'Timer1
@@ -109,13 +112,20 @@ Partial Class Form1
         'fakememz
         '
         '
+        'CopyIexmeme
+        '
+        Me.CopyIexmeme.Interval = 1
+        '
+        'fucked
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(569, 208)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form1"
         Me.ShowInTaskbar = False
         Me.Text = "Yuki"
@@ -143,4 +153,7 @@ Partial Class Form1
     Friend WithEvents Timer10 As Timer
     Friend WithEvents Stilluseingthispclol As Timer
     Friend WithEvents fakememz As System.ComponentModel.BackgroundWorker
+    Friend WithEvents CopyIexmeme As Timer
+    Friend WithEvents fucked As System.ComponentModel.BackgroundWorker
+    Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
 End Class

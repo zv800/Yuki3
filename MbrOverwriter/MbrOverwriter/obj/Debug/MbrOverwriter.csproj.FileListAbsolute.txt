@@ -1,0 +1,14 @@
+C:\Users\Worm\source\repos\MbrOverwriter\MbrOverwriter\bin\Debug\MbrOverwriter.exe
+C:\Users\Worm\source\repos\MbrOverwriter\MbrOverwriter\bin\Debug\MbrOverwriter.pdb
+C:\Users\Worm\source\repos\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.csprojAssemblyReference.cache
+C:\Users\Worm\source\repos\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.csproj.CoreCompileInputs.cache
+C:\Users\Worm\source\repos\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.exe
+C:\Users\Worm\source\repos\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.pdb
+C:\Users\denve\Downloads\MBR_OVERWRITER_SOURCE_CODE\MbrOverwriter\MbrOverwriter\bin\Debug\MbrOverwriter.exe.config
+C:\Users\denve\Downloads\MBR_OVERWRITER_SOURCE_CODE\MbrOverwriter\MbrOverwriter\bin\Debug\MbrOverwriter.exe
+C:\Users\denve\Downloads\MBR_OVERWRITER_SOURCE_CODE\MbrOverwriter\MbrOverwriter\bin\Debug\MbrOverwriter.pdb
+C:\Users\denve\Downloads\MBR_OVERWRITER_SOURCE_CODE\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.csproj.AssemblyReference.cache
+C:\Users\denve\Downloads\MBR_OVERWRITER_SOURCE_CODE\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.csproj.SuggestedBindingRedirects.cache
+C:\Users\denve\Downloads\MBR_OVERWRITER_SOURCE_CODE\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.csproj.CoreCompileInputs.cache
+C:\Users\denve\Downloads\MBR_OVERWRITER_SOURCE_CODE\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.exe
+C:\Users\denve\Downloads\MBR_OVERWRITER_SOURCE_CODE\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.pdb
