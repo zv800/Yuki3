@@ -22,6 +22,11 @@ yuki3
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:yuki3.My.Resources.Resources.Color_changing_gradient_rainbow">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:yuki3.My.Resources.Resources.EERF">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

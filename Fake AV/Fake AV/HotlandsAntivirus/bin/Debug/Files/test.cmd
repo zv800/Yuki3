@@ -1,0 +1,2 @@
+clamd.exe --help
+pause

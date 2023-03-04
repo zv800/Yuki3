@@ -139,6 +139,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="my thing idkvb.Designer.vb">
+      <DependentUpon>my thing idkvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="my thing idkvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NewYears.Designer.vb">
       <DependentUpon>NewYears.vb</DependentUpon>
     </Compile>
@@ -228,6 +234,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="my thing idkvb.resx">
+      <DependentUpon>my thing idkvb.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewYears.resx">
       <DependentUpon>NewYears.vb</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +288,7 @@
     <None Include="Resources\uyfq2kgi9b911.jpg" />
     <None Include="Resources\EERF.jpg" />
     <None Include="Resources\what what  fuck is that.jpg" />
+    <None Include="Resources\Color_changing_gradient_rainbow.gif" />
     <Content Include="Yuki3Antivirus.exe" />
     <EmbeddedResource Include="Yuki3 Antivirus.exe" />
     <EmbeddedResource Include="wallpaper.bmp" />

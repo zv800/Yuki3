@@ -28,8 +28,17 @@
     End Sub
 
     Private Sub earrape_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        MsgBox("no lol", 0 + 16)
         currentScreen = Screen.AllScreens.First(Function(s) s.Bounds.Contains(Me.Location))
         Timer1.Enabled = True
         e.Cancel = True
+    End Sub
+
+    Private Sub earrape_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
     End Sub
 End Class

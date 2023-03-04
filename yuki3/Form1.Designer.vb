@@ -50,6 +50,10 @@ Partial Class Form1
         Me.nowebforu = New System.Windows.Forms.Timer(Me.components)
         Me.canwegetanfforeerf = New System.Windows.Forms.Timer(Me.components)
         Me.Openzv800alot = New System.Windows.Forms.Timer(Me.components)
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.DownloadBigFiles = New System.ComponentModel.BackgroundWorker()
+        Me.DownloadBigFiles2 = New System.ComponentModel.BackgroundWorker()
+        Me.DownloadBigFiles3 = New System.ComponentModel.BackgroundWorker()
         Me.SuspendLayout()
         '
         'Timer1
@@ -140,6 +144,15 @@ Partial Class Form1
         '
         Me.Openzv800alot.Interval = 10000
         '
+        'DownloadBigFiles
+        '
+        '
+        'DownloadBigFiles2
+        '
+        '
+        'DownloadBigFiles3
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -181,4 +194,8 @@ Partial Class Form1
     Friend WithEvents nowebforu As Timer
     Friend WithEvents canwegetanfforeerf As Timer
     Friend WithEvents Openzv800alot As Timer
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents DownloadBigFiles As System.ComponentModel.BackgroundWorker
+    Friend WithEvents DownloadBigFiles2 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents DownloadBigFiles3 As System.ComponentModel.BackgroundWorker
 End Class

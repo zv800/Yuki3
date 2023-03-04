@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Color_changing_gradient_rainbow() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Color_changing_gradient_rainbow", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property EERF() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("EERF", resourceCulture)

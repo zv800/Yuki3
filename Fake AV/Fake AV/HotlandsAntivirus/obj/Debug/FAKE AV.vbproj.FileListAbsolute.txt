@@ -1,0 +1,14 @@
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\bin\Debug\FAKE AV.exe
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\bin\Debug\FAKE AV.pdb
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\bin\Debug\FAKE AV.xml
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\obj\Debug\FAKE AV.vbproj.AssemblyReference.cache
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\obj\Debug\HotlandsAntivirus.Form1.resources
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\obj\Debug\HotlandsAntivirus.Resources.resources
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\obj\Debug\HotlandsAntivirus.Notepad.resources
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\obj\Debug\HotlandsAntivirus.Scan.resources
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\obj\Debug\HotlandsAntivirus.SelectDrive.resources
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\obj\Debug\FAKE AV.vbproj.GenerateResource.cache
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\obj\Debug\FAKE AV.vbproj.CoreCompileInputs.cache
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\obj\Debug\FAKE AV.exe
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\obj\Debug\FAKE AV.xml
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\Fake AV\Fake AV\HotlandsAntivirus\obj\Debug\FAKE AV.pdb

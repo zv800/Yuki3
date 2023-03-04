@@ -131,3 +131,4 @@ C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3\obj\Debug\yuki3.
 C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3\obj\Debug\yuki3.googe_Edge.resources
 C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3\obj\Debug\yuki3.search_history.resources
 C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3\obj\Debug\yuki3.oh_god_what_the_fuckvb.resources
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3\obj\Debug\yuki3.my_thing_idkvb.resources
