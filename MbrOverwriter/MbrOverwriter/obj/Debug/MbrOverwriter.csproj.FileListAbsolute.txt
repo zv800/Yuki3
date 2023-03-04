@@ -12,3 +12,19 @@ C:\Users\denve\Downloads\MBR_OVERWRITER_SOURCE_CODE\MbrOverwriter\MbrOverwriter\
 C:\Users\denve\Downloads\MBR_OVERWRITER_SOURCE_CODE\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.csproj.CoreCompileInputs.cache
 C:\Users\denve\Downloads\MBR_OVERWRITER_SOURCE_CODE\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.exe
 C:\Users\denve\Downloads\MBR_OVERWRITER_SOURCE_CODE\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.pdb
+C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\MbrOverwriter\MbrOverwriter\bin\Debug\MbrOverwriter.exe.config
+C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\MbrOverwriter\MbrOverwriter\bin\Debug\MbrOverwriter.exe
+C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\MbrOverwriter\MbrOverwriter\bin\Debug\MbrOverwriter.pdb
+C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.csproj.AssemblyReference.cache
+C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.csproj.SuggestedBindingRedirects.cache
+C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.csproj.CoreCompileInputs.cache
+C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.exe
+C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.pdb
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\MbrOverwriter\MbrOverwriter\bin\Debug\MbrOverwriter.exe.config
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\MbrOverwriter\MbrOverwriter\bin\Debug\MbrOverwriter.exe
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\MbrOverwriter\MbrOverwriter\bin\Debug\MbrOverwriter.pdb
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.csproj.AssemblyReference.cache
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.csproj.SuggestedBindingRedirects.cache
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.csproj.CoreCompileInputs.cache
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.exe
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\MbrOverwriter\MbrOverwriter\obj\Debug\MbrOverwriter.pdb

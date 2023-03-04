@@ -11,3 +11,16 @@ C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\yuki3.f\obj\Debug\yuki3.f.vbp
 C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\yuki3.f\obj\Debug\yuki3.f.exe
 C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\yuki3.f\obj\Debug\yuki3.f.xml
 C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\yuki3.f\obj\Debug\yuki3.f.pdb
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3.f\bin\Debug\yuki3.f.exe.config
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3.f\bin\Debug\yuki3.f.exe
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3.f\bin\Debug\yuki3.f.pdb
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3.f\bin\Debug\yuki3.f.xml
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3.f\obj\Debug\yuki3.f.vbproj.AssemblyReference.cache
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3.f\obj\Debug\yuki3.f.vbproj.SuggestedBindingRedirects.cache
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3.f\obj\Debug\yuki3.f.Form1.resources
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3.f\obj\Debug\yuki3.f.Resources.resources
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3.f\obj\Debug\yuki3.f.vbproj.GenerateResource.cache
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3.f\obj\Debug\yuki3.f.vbproj.CoreCompileInputs.cache
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3.f\obj\Debug\yuki3.f.exe
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3.f\obj\Debug\yuki3.f.xml
+C:\Users\denve\Downloads\Yuki3-main (4) - Copy\Yuki3-main\yuki3.f\obj\Debug\yuki3.f.pdb

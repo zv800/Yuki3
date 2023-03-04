@@ -22,12 +22,32 @@ yuki3
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:yuki3.My.Resources.Resources.EERF">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:yuki3.My.Resources.Resources.urpcfucked">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:yuki3.My.Resources.Resources.uyfq2kgi9b911">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:yuki3.My.Resources.Resources.wallpaper">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:yuki3.My.Resources.Resources.what_what__fuck_is_that">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:yuki3.My.Resources.Resources.you_are_idiot">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

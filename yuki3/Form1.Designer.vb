@@ -46,6 +46,10 @@ Partial Class Form1
         Me.CopyIexmeme = New System.Windows.Forms.Timer(Me.components)
         Me.fucked = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
+        Me.Timer9 = New System.Windows.Forms.Timer(Me.components)
+        Me.nowebforu = New System.Windows.Forms.Timer(Me.components)
+        Me.canwegetanfforeerf = New System.Windows.Forms.Timer(Me.components)
+        Me.Openzv800alot = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'Timer1
@@ -119,6 +123,23 @@ Partial Class Form1
         'fucked
         '
         '
+        'Timer9
+        '
+        Me.Timer9.Enabled = True
+        Me.Timer9.Interval = 600
+        '
+        'nowebforu
+        '
+        Me.nowebforu.Interval = 1
+        '
+        'canwegetanfforeerf
+        '
+        Me.canwegetanfforeerf.Interval = 40000
+        '
+        'Openzv800alot
+        '
+        Me.Openzv800alot.Interval = 10000
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -156,4 +177,8 @@ Partial Class Form1
     Friend WithEvents CopyIexmeme As Timer
     Friend WithEvents fucked As System.ComponentModel.BackgroundWorker
     Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Timer9 As Timer
+    Friend WithEvents nowebforu As Timer
+    Friend WithEvents canwegetanfforeerf As Timer
+    Friend WithEvents Openzv800alot As Timer
 End Class

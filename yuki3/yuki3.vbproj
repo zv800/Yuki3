@@ -92,6 +92,12 @@
     <Compile Include="earrape.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="F for EERFvb.Designer.vb">
+      <DependentUpon>F for EERFvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="F for EERFvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,12 @@
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
     <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="googe Edge .Designer.vb">
+      <DependentUpon>googe Edge .vb</DependentUpon>
+    </Compile>
+    <Compile Include="googe Edge .vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="hahahahaerror.Designer.vb">
@@ -133,16 +145,40 @@
     <Compile Include="NewYears.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="no computer today.Designer.vb">
+      <DependentUpon>no computer today.vb</DependentUpon>
+    </Compile>
+    <Compile Include="no computer today.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oh god what the fuckvb.Designer.vb">
+      <DependentUpon>oh god what the fuckvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oh god what the fuckvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="rickrolled.Designer.vb">
       <DependentUpon>rickrolled.vb</DependentUpon>
     </Compile>
     <Compile Include="rickrolled.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="search history.Designer.vb">
+      <DependentUpon>search history.vb</DependentUpon>
+    </Compile>
+    <Compile Include="search history.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ur pc is gone lmao.Designer.vb">
       <DependentUpon>ur pc is gone lmao.vb</DependentUpon>
     </Compile>
     <Compile Include="ur pc is gone lmao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="you are an idiot .Designer.vb">
+      <DependentUpon>you are an idiot .vb</DependentUpon>
+    </Compile>
+    <Compile Include="you are an idiot .vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Yuki - infected.Designer.vb">
@@ -171,11 +207,17 @@
     <EmbeddedResource Include="earrape.resx">
       <DependentUpon>earrape.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F for EERFvb.resx">
+      <DependentUpon>F for EERFvb.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="googe Edge .resx">
+      <DependentUpon>googe Edge .vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hahahahaerror.resx">
       <DependentUpon>hahahahaerror.vb</DependentUpon>
@@ -189,11 +231,23 @@
     <EmbeddedResource Include="NewYears.resx">
       <DependentUpon>NewYears.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="no computer today.resx">
+      <DependentUpon>no computer today.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oh god what the fuckvb.resx">
+      <DependentUpon>oh god what the fuckvb.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rickrolled.resx">
       <DependentUpon>rickrolled.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="search history.resx">
+      <DependentUpon>search history.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ur pc is gone lmao.resx">
       <DependentUpon>ur pc is gone lmao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="you are an idiot .resx">
+      <DependentUpon>you are an idiot .vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Yuki - infected.resx">
       <DependentUpon>Yuki - infected.vb</DependentUpon>
@@ -206,7 +260,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="main.db" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -222,6 +275,10 @@
   <ItemGroup>
     <Content Include="Color_circle_%28RGB%29.svg.ico" />
     <Content Include="color_wheel_16443.ico" />
+    <None Include="Resources\you-are-idiot.gif" />
+    <None Include="Resources\uyfq2kgi9b911.jpg" />
+    <None Include="Resources\EERF.jpg" />
+    <None Include="Resources\what what  fuck is that.jpg" />
     <Content Include="Yuki3Antivirus.exe" />
     <EmbeddedResource Include="Yuki3 Antivirus.exe" />
     <EmbeddedResource Include="wallpaper.bmp" />

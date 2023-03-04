@@ -101,3 +101,5 @@ C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\yuki3\obj\Release\yuki3.vbpro
 C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\yuki3\obj\Release\yuki3.exe
 C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\yuki3\obj\Release\yuki3.xml
 C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\yuki3\obj\Release\yuki3.pdb
+C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\yuki3\obj\Release\yuki3.earrape.resources
+C:\Users\denve\Downloads\Yuki3-main (4)\Yuki3-main\yuki3\obj\Release\yuki3.you_are_an_idiot.resources

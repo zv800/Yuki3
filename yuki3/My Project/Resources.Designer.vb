@@ -61,12 +61,12 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized resource of type System.Byte[].
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property main() As Byte()
+        Friend ReadOnly Property EERF() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("main", resourceCulture)
-                Return CType(obj,Byte())
+                Dim obj As Object = ResourceManager.GetObject("EERF", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         
@@ -83,6 +83,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property uyfq2kgi9b911() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("uyfq2kgi9b911", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property wallpaper() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("wallpaper", resourceCulture)
@@ -91,22 +101,22 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized resource of type System.Byte[].
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Yuki3_Antivirus() As Byte()
+        Friend ReadOnly Property what_what__fuck_is_that() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Yuki3_Antivirus", resourceCulture)
-                Return CType(obj,Byte())
+                Dim obj As Object = ResourceManager.GetObject("what what  fuck is that", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
         
         '''<summary>
-        '''  Looks up a localized resource of type System.Byte[].
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Yuki3Antivirus() As Byte()
+        Friend ReadOnly Property you_are_idiot() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Yuki3Antivirus", resourceCulture)
-                Return CType(obj,Byte())
+                Dim obj As Object = ResourceManager.GetObject("you-are-idiot", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
     End Module
