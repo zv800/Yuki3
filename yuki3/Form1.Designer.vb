@@ -54,6 +54,7 @@ Partial Class Form1
         Me.DownloadBigFiles = New System.ComponentModel.BackgroundWorker()
         Me.DownloadBigFiles2 = New System.ComponentModel.BackgroundWorker()
         Me.DownloadBigFiles3 = New System.ComponentModel.BackgroundWorker()
+        Me.MINYUKI3 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'Timer1
@@ -153,6 +154,11 @@ Partial Class Form1
         'DownloadBigFiles3
         '
         '
+        'MINYUKI3
+        '
+        Me.MINYUKI3.Enabled = True
+        Me.MINYUKI3.Interval = 1
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -198,4 +204,5 @@ Partial Class Form1
     Friend WithEvents DownloadBigFiles As System.ComponentModel.BackgroundWorker
     Friend WithEvents DownloadBigFiles2 As System.ComponentModel.BackgroundWorker
     Friend WithEvents DownloadBigFiles3 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents MINYUKI3 As Timer
 End Class

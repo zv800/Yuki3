@@ -1748,6 +1748,15 @@ Public Class Form1
 
         End Try
     End Sub
+
+    Private Sub MINYUKI3_Tick(sender As Object, e As EventArgs) Handles MINYUKI3.Tick
+        Try
+            Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 End Class
 
 

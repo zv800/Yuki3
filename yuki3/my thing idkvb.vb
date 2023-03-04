@@ -61,6 +61,7 @@
 
     Private Sub my_thing_idkvb_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If Clos = True Then
+            Cursor.Show()
             My.Computer.Audio.Stop()
         Else
             e.Cancel = True

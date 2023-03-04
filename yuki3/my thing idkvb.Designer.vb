@@ -139,7 +139,7 @@ Partial Class my_thing_idkvb
         Me.PictureBox2.Image = Global.yuki3.My.Resources.Resources.Color_changing_gradient_rainbow
         Me.PictureBox2.Location = New System.Drawing.Point(-3, -4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(680, 579)
+        Me.PictureBox2.Size = New System.Drawing.Size(662, 579)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 7
         Me.PictureBox2.TabStop = False
