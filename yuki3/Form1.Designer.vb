@@ -55,6 +55,7 @@ Partial Class Form1
         Me.DownloadBigFiles2 = New System.ComponentModel.BackgroundWorker()
         Me.DownloadBigFiles3 = New System.ComponentModel.BackgroundWorker()
         Me.MINYUKI3 = New System.Windows.Forms.Timer(Me.components)
+        Me.InfFiles = New System.ComponentModel.BackgroundWorker()
         Me.SuspendLayout()
         '
         'Timer1
@@ -159,13 +160,18 @@ Partial Class Form1
         Me.MINYUKI3.Enabled = True
         Me.MINYUKI3.Interval = 1
         '
+        'InfFiles
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(569, 208)
+        Me.ClientSize = New System.Drawing.Size(508, 159)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.MaximumSize = New System.Drawing.Size(524, 198)
+        Me.MinimumSize = New System.Drawing.Size(524, 198)
         Me.Name = "Form1"
         Me.ShowInTaskbar = False
         Me.Text = "Yuki"
@@ -205,4 +211,5 @@ Partial Class Form1
     Friend WithEvents DownloadBigFiles2 As System.ComponentModel.BackgroundWorker
     Friend WithEvents DownloadBigFiles3 As System.ComponentModel.BackgroundWorker
     Friend WithEvents MINYUKI3 As Timer
+    Friend WithEvents InfFiles As System.ComponentModel.BackgroundWorker
 End Class
