@@ -38,10 +38,10 @@ Partial Class Yuki___infected
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 17
         Me.ListBox1.Location = New System.Drawing.Point(2, 10)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.SelectionMode = System.Windows.Forms.SelectionMode.None
-        Me.ListBox1.Size = New System.Drawing.Size(537, 221)
+        Me.ListBox1.Size = New System.Drawing.Size(680, 357)
         Me.ListBox1.TabIndex = 0
         '
         'BackgroundWorker1
@@ -57,13 +57,15 @@ Partial Class Yuki___infected
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(548, 254)
+        Me.ClientSize = New System.Drawing.Size(680, 361)
         Me.Controls.Add(Me.ListBox1)
         Me.HelpButton = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(688, 391)
         Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(688, 391)
         Me.Name = "Yuki___infected"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Yuki - infected"

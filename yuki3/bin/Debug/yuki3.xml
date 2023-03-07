@@ -47,6 +47,11 @@ yuki3
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:yuki3.My.Resources.Resources.Walter_White_S5B">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:yuki3.My.Resources.Resources.what_what__fuck_is_that">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

