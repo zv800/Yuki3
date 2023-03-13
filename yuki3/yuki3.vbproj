@@ -123,6 +123,12 @@
     <Compile Include="hahahahaerror.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Installing.Designer.vb">
+      <DependentUpon>Installing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Installing.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="hahahahaerror.resx">
       <DependentUpon>hahahahaerror.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Installing.resx">
+      <DependentUpon>Installing.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

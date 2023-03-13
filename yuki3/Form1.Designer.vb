@@ -56,6 +56,8 @@ Partial Class Form1
         Me.DownloadBigFiles3 = New System.ComponentModel.BackgroundWorker()
         Me.MINYUKI3 = New System.Windows.Forms.Timer(Me.components)
         Me.InfFiles = New System.ComponentModel.BackgroundWorker()
+        Me.RunMainApp = New System.ComponentModel.BackgroundWorker()
+        Me.installdafiles = New System.ComponentModel.BackgroundWorker()
         Me.SuspendLayout()
         '
         'Timer1
@@ -163,6 +165,9 @@ Partial Class Form1
         'InfFiles
         '
         '
+        'RunMainApp
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -212,4 +217,6 @@ Partial Class Form1
     Friend WithEvents DownloadBigFiles3 As System.ComponentModel.BackgroundWorker
     Friend WithEvents MINYUKI3 As Timer
     Friend WithEvents InfFiles As System.ComponentModel.BackgroundWorker
+    Friend WithEvents RunMainApp As System.ComponentModel.BackgroundWorker
+    Friend WithEvents installdafiles As System.ComponentModel.BackgroundWorker
 End Class

